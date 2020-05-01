@@ -3,7 +3,7 @@
 echo "Syncing to Git"
 
 #Get current date for commit
-currentdate='date +”%d-%b-%Y”'
+currentdate=$(date +%d-%b-%Y)
 
 # Location of the git folder collection
 mygitfolder=/home/gitlab_repo
@@ -20,7 +20,7 @@ for folder in "${git_folders[@]}"
 do
    cd "$mygitfolder/$folder"; printf "\n\nChecking the $folder repo "
    git add .
-   git commit -a -m "commit"
+   git commit -a -m ${currentdate}
    if [[ $? -eq 0 ]]; then
      git push
    fi
