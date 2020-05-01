@@ -1,0 +1,24 @@
++++ testswitch: executing command 'show ip prefix-list detail' +++
+show ip prefix-list detail
+show ip prefix-list detail
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 prefix-list detail' +++
+show ipv6 prefix-list detail
+show ipv6 prefix-list detail
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
+Could not learn <class 'genie.libs.parser.ios.show_prefix_list.ShowIpv6PrefixListDetail'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'PrefixList'                                                                                                         |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_prefix_list.ShowIpPrefixListDetail'>                                                                     |
+|   cmd: <class 'genie.libs.parser.ios.show_prefix_list.ShowIpv6PrefixListDetail'>                                                                   |
+|====================================================================================================================================================|

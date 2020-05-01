@@ -1,0 +1,19 @@
++++ testswitch: executing command 'show vrf detail' +++
+show vrf detail
+testswitch#
++++ testswitch: executing command 'show ip igmp interface' +++
+show ip igmp interface
+show ip igmp interface
+             ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip igmp groups detail' +++
+show ip igmp groups detail
+show ip igmp groups detail
+             ^
+% Invalid input detected at '^' marker.
+
+testswitch#
+Could not learn <class 'genie.libs.parser.ios.show_igmp.ShowIpIgmpGroupsDetail'>
+Invalid command has been executed

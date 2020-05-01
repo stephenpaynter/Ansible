@@ -1,0 +1,5 @@
++++ testswitch: executing command 'show vrf detail' +++
+show vrf detail
+testswitch#
+Could not learn <class 'genie.libs.parser.iosxe.show_vrf.ShowVrfDetail'>
+Parser Output is empty

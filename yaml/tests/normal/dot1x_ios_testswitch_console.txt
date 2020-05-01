@@ -1,0 +1,38 @@
++++ testswitch: executing command 'show dot1x all details' +++
+show dot1x all details
+Sysauthcontrol             Disabled
+Dot1x Protocol Version            3
+
+testswitch#
++++ testswitch: executing command 'show dot1x all count' +++
+show dot1x all count
+Number of Dot1x sessions
+-------------------------------
+Authorized Clients        = 0
+UnAuthorized Clients      = 0
+Total No of Client        = 0
+testswitch#
++++ testswitch: executing command 'show dot1x all statistics' +++
+show dot1x all statistics
+
+testswitch#
++++ testswitch: executing command 'show dot1x all summary' +++
+show dot1x all summary
+Interface       PAE     Client          Status          
+--------------------------------------------------------
+testswitch#
+Could not learn <class 'genie.libs.parser.ios.show_dot1x.ShowDot1xAllSummary'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Dot1X'                                                                                                              |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_dot1x.ShowDot1xAllDetail'>                                                                               |
+|   cmd: <class 'genie.libs.parser.ios.show_dot1x.ShowDot1xAllCount'>                                                                                |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_dot1x.ShowDot1xAllStatistics'>                                                                           |
+|   cmd: <class 'genie.libs.parser.ios.show_dot1x.ShowDot1xAllSummary'>                                                                              |
+|====================================================================================================================================================|

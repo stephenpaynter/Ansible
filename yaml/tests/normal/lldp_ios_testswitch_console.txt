@@ -1,0 +1,110 @@
++++ testswitch: executing command 'show lldp' +++
+show lldp
+
+Global LLDP Information:
+    Status: ACTIVE
+    LLDP advertisements are sent every 30 seconds
+    LLDP hold time advertised is 120 seconds
+    LLDP interface reinitialisation delay is 2 seconds
+testswitch#
++++ testswitch: executing command 'show lldp traffic' +++
+show lldp traffic
+
+LLDP traffic statistics:
+    Total frames out: 359
+    Total entries aged: 0
+    Total frames in: 0
+    Total frames received in error: 0
+    Total frames discarded: 0
+    Total TLVs discarded: 0
+    Total TLVs unrecognized: 0
+testswitch#
++++ testswitch: executing command 'show lldp entry *' +++
+show lldp entry *
+
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+
+Total entries displayed: 0
+testswitch#
++++ testswitch: executing command 'show lldp neighbors detail' +++
+show lldp neighbors detail
+
+Total entries displayed: 0
+
+testswitch#
++++ testswitch: executing command 'show lldp interface' +++
+show lldp interface
+
+FastEthernet1/1:
+    Tx: enabled
+    Rx: enabled
+    Tx state: IDLE
+    Rx state: WAIT FOR FRAME
+
+FastEthernet1/2:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+FastEthernet1/3:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+FastEthernet1/4:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+FastEthernet1/5:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+FastEthernet1/6:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+FastEthernet1/7:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+FastEthernet1/8:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+GigabitEthernet1/1:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+
+GigabitEthernet1/2:
+    Tx: enabled
+    Rx: enabled
+    Tx state: INIT
+    Rx state: WAIT PORT OPER
+testswitch#
++====================================================================================================================================================+
+| Commands for learning feature 'Lldp'                                                                                                               |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_lldp.ShowLldp'>                                                                                          |
+|   cmd: <class 'genie.libs.parser.ios.show_lldp.ShowLldpTraffic'>                                                                                   |
+|   cmd: <class 'genie.libs.parser.ios.show_lldp.ShowLldpEntry'>                                                                                     |
+|   cmd: <class 'genie.libs.parser.ios.show_lldp.ShowLldpNeighborsDetail'>                                                                           |
+|   cmd: <class 'genie.libs.parser.ios.show_lldp.ShowLldpInterface'>                                                                                 |
+|====================================================================================================================================================|

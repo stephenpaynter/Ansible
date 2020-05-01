@@ -1,0 +1,13 @@
+{
+  "_exclude": [
+    "expire",
+    "uptime",
+    "flags",
+    "incoming_interface_list"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "list_of_vrfs": null
+}

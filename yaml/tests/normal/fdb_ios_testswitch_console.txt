@@ -1,0 +1,81 @@
++++ testswitch: executing command 'show mac address-table aging-time' +++
+show mac address-table aging-time
+Global Aging Time:  300
+Vlan    Aging Time
+----    ----------
+testswitch#
++++ testswitch: executing command 'show mac address-table learning' +++
+show mac address-table learning
+
+VLAN    Learning Status
+----    ---------------
+1             yes   
+
+testswitch#
++++ testswitch: executing command 'show mac address-table' +++
+show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    010e.cf00.0000    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+   1    0019.fb6a.f4bb    DYNAMIC     Fa1/1
+   1    0019.fb8a.fc44    DYNAMIC     Fa1/1
+   1    001f.f302.bc72    DYNAMIC     Fa1/1
+   1    0023.dff8.7ef0    DYNAMIC     Fa1/1
+   1    0025.4b05.6f26    DYNAMIC     Fa1/1
+   1    003e.e1be.cb2b    DYNAMIC     Fa1/1
+   1    00a0.defa.3d02    DYNAMIC     Fa1/1
+   1    045d.4b6f.2876    DYNAMIC     Fa1/1
+   1    2816.a8f8.bf4f    DYNAMIC     Fa1/1
+   1    40cb.c0bf.e8eb    DYNAMIC     Fa1/1
+   1    54e4.3af2.8cc3    DYNAMIC     Fa1/1
+   1    5855.ca1a.72af    DYNAMIC     Fa1/1
+   1    5890.431b.9b83    DYNAMIC     Fa1/1
+   1    608b.0e25.e038    DYNAMIC     Fa1/1
+   1    68a8.6d5d.45c6    DYNAMIC     Fa1/1
+   1    7cd1.c32f.6d87    DYNAMIC     Fa1/1
+   1    9084.0deb.f774    DYNAMIC     Fa1/1
+   1    b8be.f402.9b7f    DYNAMIC     Fa1/1
+   1    cc50.e310.c0ac    DYNAMIC     Fa1/1
+   1    ccd2.817d.26aa    DYNAMIC     Fa1/1
+   1    dca6.329c.c69a    DYNAMIC     Fa1/1
+   1    dca6.329c.c69b    DYNAMIC     Fa1/1
+   1    f406.8d0c.78df    DYNAMIC     Fa1/1
+   1    f406.8d0c.78e0    DYNAMIC     Fa1/1
+   1    f406.8d43.25e8    DYNAMIC     Fa1/1
+Total Mac Addresses for this criterion: 46
+testswitch#
++====================================================================================================================================================+
+| Commands for learning feature 'Fdb'                                                                                                                |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_fdb.ShowMacAddressTableAgingTime'>                                                                       |
+|   cmd: <class 'genie.libs.parser.ios.show_fdb.ShowMacAddressTable'>                                                                                |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_fdb.ShowMacAddressTableLearning'>                                                                        |
+|====================================================================================================================================================|

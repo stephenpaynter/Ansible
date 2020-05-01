@@ -1,0 +1,245 @@
+{
+  "_exclude": [],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "mac_aging_time": 300,
+    "mac_table": {
+      "vlans": {
+        "1": {
+          "mac_addresses": {
+            "0019.fb6a.f4bb": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "0019.fb6a.f4bb"
+            },
+            "0019.fb8a.fc44": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "0019.fb8a.fc44"
+            },
+            "001f.f302.bc72": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "001f.f302.bc72"
+            },
+            "0023.dff8.7ef0": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "0023.dff8.7ef0"
+            },
+            "0025.4b05.6f26": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "0025.4b05.6f26"
+            },
+            "003e.e1be.cb2b": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "003e.e1be.cb2b"
+            },
+            "00a0.defa.3d02": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "00a0.defa.3d02"
+            },
+            "045d.4b6f.2876": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "045d.4b6f.2876"
+            },
+            "2816.a8f8.bf4f": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "2816.a8f8.bf4f"
+            },
+            "40cb.c0bf.e8eb": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "40cb.c0bf.e8eb"
+            },
+            "54e4.3af2.8cc3": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "54e4.3af2.8cc3"
+            },
+            "5855.ca1a.72af": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "5855.ca1a.72af"
+            },
+            "5890.431b.9b83": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "5890.431b.9b83"
+            },
+            "608b.0e25.e038": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "608b.0e25.e038"
+            },
+            "68a8.6d5d.45c6": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "68a8.6d5d.45c6"
+            },
+            "7cd1.c32f.6d87": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "7cd1.c32f.6d87"
+            },
+            "9084.0deb.f774": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "9084.0deb.f774"
+            },
+            "b8be.f402.9b7f": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "b8be.f402.9b7f"
+            },
+            "cc50.e310.c0ac": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "cc50.e310.c0ac"
+            },
+            "ccd2.817d.26aa": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "ccd2.817d.26aa"
+            },
+            "dca6.329c.c69a": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "dca6.329c.c69a"
+            },
+            "dca6.329c.c69b": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "dca6.329c.c69b"
+            },
+            "f406.8d0c.78df": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "f406.8d0c.78df"
+            },
+            "f406.8d0c.78e0": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "f406.8d0c.78e0"
+            },
+            "f406.8d43.25e8": {
+              "interfaces": {
+                "FastEthernet1/1": {
+                  "entry_type": "dynamic",
+                  "interface": "FastEthernet1/1"
+                }
+              },
+              "mac_address": "f406.8d43.25e8"
+            }
+          },
+          "vlan": 1
+        }
+      }
+    },
+    "total_mac_addresses": 46
+  }
+}

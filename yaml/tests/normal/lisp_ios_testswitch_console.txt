@@ -1,0 +1,56 @@
++++ testswitch: executing command 'show lisp all service ipv4' +++
+show lisp all service ipv4
+show lisp all service ipv4
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show lisp all service ipv4 summary' +++
+show lisp all service ipv4 summary
+show lisp all service ipv4 summary
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show lisp all service ipv6 summary' +++
+show lisp all service ipv6 summary
+show lisp all service ipv6 summary
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show lisp all service ipv6' +++
+show lisp all service ipv6
+show lisp all service ipv6
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show lisp all service ethernet summary' +++
+show lisp all service ethernet summary
+show lisp all service ethernet summary
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show lisp all service ethernet' +++
+show lisp all service ethernet
+show lisp all service ethernet
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
+Could not learn <class 'genie.libs.parser.ios.show_lisp.ShowLispService'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Lisp'                                                                                                               |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_lisp.ShowLispService'>, arguments: {'service':'ipv4'}                                                    |
+|   cmd: <class 'genie.libs.parser.ios.show_lisp.ShowLispServiceSummary'>, arguments: {'service':'ipv4'}                                             |
+|   cmd: <class 'genie.libs.parser.ios.show_lisp.ShowLispServiceSummary'>, arguments: {'service':'ipv6'}                                             |
+|   cmd: <class 'genie.libs.parser.ios.show_lisp.ShowLispService'>, arguments: {'service':'ipv6'}                                                    |
+|   cmd: <class 'genie.libs.parser.ios.show_lisp.ShowLispServiceSummary'>, arguments: {'service':'ethernet'}                                         |
+|   cmd: <class 'genie.libs.parser.ios.show_lisp.ShowLispService'>, arguments: {'service':'ethernet'}                                                |
+|====================================================================================================================================================|

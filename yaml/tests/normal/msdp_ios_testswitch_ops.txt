@@ -1,0 +1,16 @@
+{
+  "_exclude": [
+    "statistics",
+    "elapsed_time",
+    "up_time",
+    "expire",
+    "sa_message",
+    "last_message_received",
+    "total",
+    "keepalive"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {}
+}

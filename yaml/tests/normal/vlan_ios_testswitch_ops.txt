@@ -1,0 +1,53 @@
+{
+  "_exclude": [],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "vlans": {
+      "1": {
+        "interfaces": [
+          "FastEthernet1/1",
+          "FastEthernet1/2",
+          "FastEthernet1/3",
+          "FastEthernet1/4",
+          "FastEthernet1/5",
+          "FastEthernet1/6",
+          "FastEthernet1/7",
+          "FastEthernet1/8",
+          "GigabitEthernet1/1",
+          "GigabitEthernet1/2"
+        ],
+        "name": "default",
+        "shutdown": false,
+        "state": "active",
+        "vlan_id": "1"
+      },
+      "1002": {
+        "name": "fddi-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1002"
+      },
+      "1003": {
+        "name": "token-ring-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1003"
+      },
+      "1004": {
+        "name": "fddinet-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1004"
+      },
+      "1005": {
+        "name": "trnet-default",
+        "shutdown": false,
+        "state": "unsupport",
+        "vlan_id": "1005"
+      }
+    }
+  }
+}

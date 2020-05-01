@@ -1,0 +1,12 @@
+---
+# This playbook prints a simple debug message
+- hosts: 127.0.0.1
+  gather_facts: no
+  
+  tasks:
+  
+    - name: Hello World
+      shell: echo "Ansible Tower Is Available"
+
+    - debug:
+        msg: Ansible Tower is Available.

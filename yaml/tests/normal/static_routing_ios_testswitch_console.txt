@@ -1,0 +1,31 @@
++++ testswitch: executing command 'show vrf detail' +++
+show vrf detail
+testswitch#
++++ testswitch: executing command 'show ip static route' +++
+show ip static route
+show ip static route
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 static detail' +++
+show ipv6 static detail
+show ipv6 static detail
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
+Could not learn <class 'genie.libs.parser.ios.show_static_routing.ShowIpv6StaticDetail'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'StaticRouting'                                                                                                      |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_static_routing.ShowIpStaticRoute'>, arguments: {'vrf':''}                                                |
+|   cmd: <class 'genie.libs.parser.ios.show_static_routing.ShowIpv6StaticDetail'>, arguments: {'vrf':''}                                             |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.iosxe.show_vrf.ShowVrfDetail'>                                                                                    |
+|====================================================================================================================================================|

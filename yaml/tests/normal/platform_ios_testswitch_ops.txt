@@ -1,0 +1,41 @@
+{
+  "_exclude": [
+    "rp_uptime",
+    "disk_free_space",
+    "uptime",
+    "switchover_reason",
+    "disk_used_space",
+    "total_free_bytes",
+    "disk_total_space",
+    "main_mem",
+    "date",
+    "index",
+    "chassis_sn",
+    "image",
+    "sn",
+    "rp_boot_image",
+    "installed_packages",
+    "version"
+  ],
+  "attributes": null,
+  "chassis": "IE-2000-8TC-G-B",
+  "chassis_sn": "FDO1811T05H",
+  "commands": null,
+  "config_register": "0xF",
+  "connections": null,
+  "context_manager": {},
+  "dir": "flash:/",
+  "image": "flash:/ie2000-universalk9-mz.150-2.EA1/ie2000-universalk9-mz.150-2.EA1.bin",
+  "main_mem": "131072",
+  "os": "ios",
+  "rtr_type": "IE-2000-8TC-G-B",
+  "slot": {
+    "oc": {
+      "1": {
+        "name": "1",
+        "sn": "FDO1811T05H"
+      }
+    }
+  },
+  "version": "15.0(2)EA1"
+}

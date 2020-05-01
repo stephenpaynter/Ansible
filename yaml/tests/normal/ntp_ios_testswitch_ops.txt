@@ -1,0 +1,12 @@
+{
+  "_exclude": [
+    "root_delay",
+    "delay",
+    "root_dispersion",
+    "receive_time"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {}
+}

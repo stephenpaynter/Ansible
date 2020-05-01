@@ -1,0 +1,42 @@
+{
+  "_exclude": [
+    "in_requests_pkts",
+    "in_replies_pkts",
+    "in_requests_pkts",
+    "out_replies_pkts",
+    "out_requests_pkts",
+    "in_drops",
+    "in_replies_pkts",
+    "out_requests_pkts",
+    "out_total"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "interfaces": {
+      "Vlan1": {
+        "ipv4": {
+          "neighbors": {
+            "192.168.1.141": {
+              "ip": "192.168.1.141",
+              "link_layer_address": "003e.e1be.cb2b",
+              "origin": "dynamic"
+            },
+            "192.168.1.142": {
+              "ip": "192.168.1.142",
+              "link_layer_address": "38f9.d399.491a",
+              "origin": "dynamic"
+            },
+            "192.168.1.200": {
+              "ip": "192.168.1.200",
+              "link_layer_address": "6412.255e.d9c0",
+              "origin": "static"
+            }
+          }
+        }
+      }
+    }
+  }
+}

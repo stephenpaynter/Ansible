@@ -1,0 +1,7 @@
+Issue while building the feature
+
+Traceback (most recent call last):
+  File "src/genie/cli/commands/learn.py", line 343, in genie.cli.commands.learn.LearnCommand._retrieve_ops
+  File "/usr/local/lib/python3.6/site-packages/genie/libs/ops/isis/iosxe/isis.py", line 242, in learn
+    for instance, vrf in self.instance_vrf.items():
+AttributeError: 'NoneType' object has no attribute 'items'

@@ -1,0 +1,111 @@
++++ testswitch: executing command 'show vrf detail' +++
+show vrf detail
+testswitch#
++++ testswitch: executing command 'show ip mroute' +++
+show ip mroute
+show ip mroute
+        ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 mroute' +++
+show ipv6 mroute
+show ipv6 mroute
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip pim rp mapping' +++
+show ip pim rp mapping
+show ip pim rp mapping
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip pim bsr-router' +++
+show ip pim bsr-router
+show ip pim bsr-router
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 pim bsr election' +++
+show ipv6 pim bsr election
+show ipv6 pim bsr election
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 pim bsr candidate-rp' +++
+show ipv6 pim bsr candidate-rp
+show ipv6 pim bsr candidate-rp
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip pim interface df' +++
+show ip pim interface df
+show ip pim interface df
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip pim interface detail' +++
+show ip pim interface detail
+show ip pim interface detail
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip pim interface' +++
+show ip pim interface
+show ip pim interface
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 pim interface' +++
+show ipv6 pim interface
+show ipv6 pim interface
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ip pim neighbor' +++
+show ip pim neighbor
+show ip pim neighbor
+         ^
+% Invalid input detected at '^' marker.
+
+testswitch#
++++ testswitch: executing command 'show ipv6 pim neighbor detail' +++
+show ipv6 pim neighbor detail
+show ipv6 pim neighbor detail
+       ^
+% Invalid input detected at '^' marker.
+
+testswitch#
+Could not learn <class 'genie.libs.parser.ios.show_pim.ShowIpv6PimNeighborDetail'>
+Invalid command has been executed
++====================================================================================================================================================+
+| Commands for learning feature 'Pim'                                                                                                                |
++====================================================================================================================================================+
+| - Commands not accepted on the device                                                                                                              |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_mcast.ShowIpMroute'>, arguments: {'vrf':''}                                                              |
+|   cmd: <class 'genie.libs.parser.ios.show_mcast.ShowIpv6Mroute'>, arguments: {'vrf':''}                                                            |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpPimRpMapping'>, arguments: {'vrf':''}                                                          |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpPimBsrRouter'>, arguments: {'vrf':''}                                                          |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpv6PimBsrElection'>, arguments: {'vrf':''}                                                      |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpv6PimBsrCandidateRp'>, arguments: {'vrf':''}                                                   |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpPimInterfaceDf'>, arguments: {'vrf':''}                                                        |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpPimInterfaceDetail'>, arguments: {'vrf':''}                                                    |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpPimInterface'>, arguments: {'vrf':''}                                                          |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpv6PimInterface'>, arguments: {'vrf':''}                                                        |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpPimNeighbor'>, arguments: {'vrf':''}                                                           |
+|   cmd: <class 'genie.libs.parser.ios.show_pim.ShowIpv6PimNeighborDetail'>, arguments: {'vrf':''}                                                   |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.ios.show_vrf.ShowVrfDetail'>                                                                                      |
+|====================================================================================================================================================|

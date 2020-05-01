@@ -1,0 +1,5 @@
++++ testswitch: executing command 'show run | sec isis' +++
+show run | sec isis
+testswitch#
+Could not learn <class 'genie.libs.parser.iosxe.show_isis.ShowRunSectionIsis'>
+Parser Output is empty
