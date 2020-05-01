@@ -3,7 +3,7 @@
 echo "Syncing to Git"
 
 # Location of the git folder collection
-mygitfolder=/home/gitlab_rep
+mygitfolder=/home/gitlab_repo
 
 # Loop through all folders and place the names in an array
 git_folders=()
