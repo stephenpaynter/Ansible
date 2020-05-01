@@ -20,7 +20,7 @@ for folder in "${git_folders[@]}"
 do
    cd "$mygitfolder/$folder"; printf "\n\nChecking the $folder repo "
    git add .
-   git commit -a -m "${currentdate}"
+   git commit -a -m "commit"
    if [[ $? -eq 0 ]]; then
      git push
    fi
