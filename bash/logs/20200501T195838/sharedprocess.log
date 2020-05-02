@@ -1,0 +1,3 @@
+[2020-05-01 19:58:43.502] [sharedprocess] [info] main {"machineId":"6c74fcc4608b4a89251e77283787fa332ea68f608f60153ac68eb54c727ee3db","windowId":2}
+[2020-05-01 19:58:43.652] [sharedprocess] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/gitlab_repo/bash/User/snippets'
+[2020-05-01 19:59:23.583] [sharedprocess] [info] Starting to clean up unused language packs.
