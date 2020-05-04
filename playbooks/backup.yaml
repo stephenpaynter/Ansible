@@ -1,0 +1,18 @@
+---
+- hosts: testswitch
+  gather_facts: no
+
+  tasks:
+    
+  - name: BACKUP VERSION
+    ios_command:
+      commands:
+        - show version
+    register: version
+    vars:
+      ansible_command_timeout: 180 
+
+  - name: SAVE CONFIG TO LOCAL REPO
+    copy:
+      content: "{{ version.stdout[0]}}"
+      dest: "/home/gitlab_repo/backup/{{ inventory_hostname }}.txt"
