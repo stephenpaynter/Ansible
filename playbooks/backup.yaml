@@ -16,3 +16,6 @@
     copy:
       content: "{{ version.stdout[0]}}"
       dest: "/home/gitlab_repo/backup/{{ inventory_hostname }}.txt"
+
+  - name: Execute the command in remote shell; stdout goes to the specified file on the remote.
+    shell: /home/gitlab_repo/bash/bash ./git-push 
