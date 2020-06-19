@@ -1,0 +1,9 @@
+---
+
+## Rollback checkpoint ###
+
+
+- name: Rollback Nexus Checkpoint
+  nxos_command:
+    commands:
+      - rollback running-config checkpoint {{ change_ref }}

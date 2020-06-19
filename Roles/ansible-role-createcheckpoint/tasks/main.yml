@@ -1,0 +1,9 @@
+---
+
+## Create Checkpoint ###
+
+
+- name: Create Nexus Checkpoint
+  nxos_command:
+    commands:
+      - checkpoint {{ change_ref }}

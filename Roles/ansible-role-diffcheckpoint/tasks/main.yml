@@ -1,0 +1,14 @@
+---
+
+## Diff checkpoint ###
+
+
+- name: Diff Nexus Checkpoint
+  nxos_command:
+    commands:
+      - show diff rollback-patch checkpoint {{ change_ref }} running-config 
+
+  register: diff_output
+
+- debug:
+    msg: "{{ diff_output.stdout_lines[0] | to_nice_yaml }}"

@@ -1,0 +1,9 @@
+---
+
+## Delete checkpoint ###
+
+
+- name: Delete Nexus Checkpoint
+  nxos_command:
+    commands:
+      - no checkpoint {{ change_ref }}

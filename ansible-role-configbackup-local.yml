@@ -1,8 +1,0 @@
----
-
-- name: Configuration Backup To Git
-  hosts: ansible
-  gather_facts: no
-  
-  roles:
-    - ansible-role-configbackup-local
