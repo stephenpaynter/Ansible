@@ -1,0 +1,15 @@
+---
+
+  - name: Read In Parse_Genie role
+    include_role:
+      name: clay584.parse_genie
+      
+  - name: Get data from device
+    nxos_command:
+      commands: show vrf
+    register: vrf_output
+    
+  - name: Print structured data
+    debug:
+      msg: "{{ vrf_output['stdout'][0] | parse_genie(command='show vrf', os='nxos') }}"
+    delegate_to: localhost

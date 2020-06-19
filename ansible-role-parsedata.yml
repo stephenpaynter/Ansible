@@ -1,0 +1,6 @@
+---
+- hosts: Nexus1-Primary
+  gather_facts: no
+  
+  roles:
+    - ansible-role-parsedata
