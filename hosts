@@ -1,0 +1,34 @@
+ansible ansible_host=192.168.1.200
+
+[Core-Primary]
+Nexus1-Primary ansible_host=192.168.1.253 
+Nexus2-Primary ansible_host=192.168.1.254
+
+[Core-Secondary]
+Nexus1-Secondary ansible_host=192.168.2.253  
+Nexus2-Secondary ansible_host=192.168.2.254
+
+[Core:children]
+Core-Primary
+Core-Secondary
+
+[Core:vars]
+ansible_network_os=nxos
+ansible_connection=network_cli
+
+
+[Access-Primary]
+IOS1-Primary ansible_host=192.168.1.251
+IOS2-Primary ansible_host=192.168.1.252
+
+[Access-Secondary]
+IOS1-Secondary ansible_host=192.168.2.251 
+IOS2-Secondary ansible_host=192.168.2.252
+
+[Access:children]
+Access-Primary
+Access-Secondary
+
+[Access:vars]
+ansible_network_os=ios
+ansible_connection=network_cli
