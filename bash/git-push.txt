@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "Syncing to Git"
+echo `whoami`  CHECK
+#Get current date for commit
+currentdate=$(date +%d-%b-%Y)
+gitcommittime=$(date +%d-%b-%Y-%H:%M)
+
+# Location of the git folder collection
+mygitfolder=/ansible/cloned_local_repositories/dailybackups
+
+cd "$mygitfolder" 
+
+/usr/bin/git add .
+/usr/bin/git commit -a -m ${gitcommittime}
+/usr/bin/git push
+
+
