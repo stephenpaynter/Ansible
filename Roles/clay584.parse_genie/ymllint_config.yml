@@ -1,6 +1,0 @@
----
-
-ignore: |
-  README.md
-  ansible.cfg
-  LICENSE

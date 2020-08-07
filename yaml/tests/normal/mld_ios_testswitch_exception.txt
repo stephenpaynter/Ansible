@@ -1,7 +1,0 @@
-Issue while building the feature
-
-Traceback (most recent call last):
-  File "src/genie/cli/commands/learn.py", line 343, in genie.cli.commands.learn.LearnCommand._retrieve_ops
-  File "/usr/local/lib/python3.6/site-packages/genie/libs/ops/mld/iosxe/mld.py", line 32, in learn
-    vrf_list.extend(self.list_of_vrfs)
-TypeError: 'NoneType' object is not iterable

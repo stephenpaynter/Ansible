@@ -1,6 +1,0 @@
-utils is not yet developed for device testswitch
-
-Traceback (most recent call last):
-  File "src/genie/cli/commands/learn.py", line 293, in genie.cli.commands.learn.LearnCommand._retrieve_ops
-  File "src/genie/ops/utils.py", line 40, in genie.ops.utils.get_ops
-LookupError: Could not find an OPS called 'utils'

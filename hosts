@@ -1,34 +1,90 @@
-ansible ansible_host=192.168.1.200
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
 
-[Core-Primary]
-Nexus1-Primary ansible_host=192.168.1.253 
-Nexus2-Primary ansible_host=192.168.1.254
+# Ex 1: Ungrouped hosts, specify before any group headers.
 
-[Core-Secondary]
-Nexus1-Secondary ansible_host=192.168.2.253  
-Nexus2-Secondary ansible_host=192.168.2.254
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
 
-[Core:children]
-Core-Primary
-Core-Secondary
+# Ex 2: A collection of hosts belonging to the 'webservers' group
 
-[Core:vars]
-ansible_network_os=nxos
-ansible_connection=network_cli
+## [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
 
+# If you have multiple hosts following a pattern you can specify
+# them like this:
 
-[Access-Primary]
-IOS1-Primary ansible_host=192.168.1.251
-IOS2-Primary ansible_host=192.168.1.252
+## www[001:006].example.com
 
-[Access-Secondary]
-IOS1-Secondary ansible_host=192.168.2.251 
-IOS2-Secondary ansible_host=192.168.2.252
+# Ex 3: A collection of database servers in the 'dbservers' group
 
-[Access:children]
-Access-Primary
-Access-Secondary
+## [dbservers]
+## 
+## db01.intranet.mydomain.net
+## db02.intranet.mydomain.net
+## 10.25.1.56
+## 10.25.1.57
 
-[Access:vars]
+# Here's another example of host ranges, this time there are no
+# leading 0s:
+
+## db-[99:101]-node.example.com
+
+[ios]
+
+R1 ansible_host=192.168.1.240
+R2 ansible_host=192.168.1.243
+R3 ansible_host=192.168.1.244
+R4 ansible_host=192.168.1.242
+R5 ansible_host=192.168.1.245
+R6 ansible_host=192.168.1.246
+R7 ansible_host=192.168.1.247
+R8 ansible_host=192.168.1.248
+
+[ios:vars]
+
+ansible_ssh_pass=cisco
+ansible_user=cisco
 ansible_network_os=ios
 ansible_connection=network_cli
+ansible_password=cisco
+
+[nxos]
+
+R9 ansible_host=192.168.1.251
+
+[nxos:vars]
+
+ansible_ssh_pass=cisco
+ansible_user=cisco
+ansible_network_os=nxos
+ansible_connection=network_cli
+ansible_password=cisco
+
+[firewalls]
+asa ansible_host=192.168.1.227
+
+[firewalls:vars]
+ansible_ssh_pass=cisco
+ansible_user=cisco
+ansible_network_os=asa
+ansible_connection=network_cli
+ansible_password=cisco
+
+[lab]
+R1
+R2
+R9
+asa
