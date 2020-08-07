@@ -1,0 +1,43 @@
+---
+  - set_fact:
+      timestamp: "{{lookup('pipe', 'date +%Y%m%d') }}"
+
+  - name: "NXOS Devices"
+    block:
+      - name: "1.0: Pre Change Configuration Backup"
+        nxos_config:
+          backup: yes
+          backup_options:
+            filename: "{{ inventory_hostname }}pre.txt"
+            dir_path: /root/repositories/ansible/ansiblenet/dailychanges/{{ timestamp }}/{{ change_ref }}/
+      - include_tasks: "./includes/nxos_genie.yml"
+    when: ansible_network_os == 'nxos'
+
+
+  - name: "IOS Devices"
+    block:
+      - name: "2.0: Pre Change Configuration Backup"
+        ios_config:
+          backup: yes
+          backup_options:
+            filename: "{{ inventory_hostname }}post.txt"
+            dir_path: /root/repositories/ansible/ansiblenet/dailychanges/{{ timestamp }}/{{ change_ref }}/
+      - include_tasks: "./includes/ios_genie.yml"
+    when: ansible_network_os == 'ios'      
+ 
+  - name: "ASA Devices"
+    block:
+      - name: "3.0: Pre Change Configuration Backup"
+        asa_config:
+          backup: yes
+          backup_options:
+            filename: "{{ inventory_hostname }}pre.txt"
+            dir_path: /root/repositories/ansible/ansiblenet/dailychanges/{{ timestamp }}/{{ change_ref }}/
+      - include_tasks: "./includes/asa_genie.yml"
+    when: ansible_network_os == 'asa'    
+
+
+
+    
+
+    

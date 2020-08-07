@@ -1,0 +1,8 @@
+---
+
+  - name: Configuration Pre Checks 
+    hosts: "{{ device }}"
+    gather_facts: no
+  
+    roles:
+      - ansible-role-prechecks

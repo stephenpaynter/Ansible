@@ -1,0 +1,7 @@
+---
+
+
+  - name: "3.1 Running Genie Parse on ASA Devices" 
+    command: genie parse "show route" --testbed-file testbed.yaml --devices "{{ item }}" --output /root/repositories/ansible/ansiblenet/dailychanges/{{ timestamp }}/{{ change_ref }}/GeniePre/
+    with_items: "{{ device }}"   
+      

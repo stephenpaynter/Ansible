@@ -1,0 +1,7 @@
+---
+
+
+  - name: "2.1 Running Genie Parse on IOS Devices" 
+    command: genie parse "show ntp status" --testbed-file testbed.yaml --devices "{{ item }}" --output /root/repositories/ansible/ansiblenet/dailychanges/{{ timestamp }}/{{ change_ref }}/GeniePre/
+    with_items: "{{ device }}"   
+      

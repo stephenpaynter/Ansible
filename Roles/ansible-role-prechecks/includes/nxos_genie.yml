@@ -1,0 +1,7 @@
+---
+
+
+  - name: "1.1 Running Genie Parse on NXOS Devices" 
+    command: genie parse "show feature-set" --testbed-file testbed.yaml --devices "{{ item }}" --output /root/repositories/ansible/ansiblenet/dailychanges/{{ timestamp }}/{{ change_ref }}/GeniePre/
+    with_items: "{{ device }}"   
+      
