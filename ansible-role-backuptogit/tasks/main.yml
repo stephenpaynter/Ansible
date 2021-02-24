@@ -1,0 +1,67 @@
+---
+
+  - set_fact:
+      timestamp: "{{ lookup('pipe', 'date +%Y%m%d') }}"
+      
+  - name: 1.0 Git Switch to target branch
+    command: git checkout "{{ git_branch }}"
+    args:
+      chdir: "{{ git_branch }}"
+    changed_when: false
+
+  - name: 1.1 Git Synchronize with remote branch
+    command: git pull
+    args:
+      chdir: "{{ git_branch }}"
+    changed_when: false
+    delegate_to: localhost
+    run_once: yes
+
+  - name: "NXOS Devices"
+    block: 
+      - name: "1.0: Backup Cisco NXOS devices From Inventory"
+        nxos_config:
+          backup: yes
+          backup_options:
+            filename: "{{ inventory_hostname }}.txt"
+            dir_path: "{{ git_branch }}"
+    when: ansible_network_os == 'nxos'
+ 
+  - name: "IOS Devices"
+    block:
+      - name: "2.0: Backup Cisco IOS devices From Inventory"
+        ios_config:
+          backup: yes
+          backup_options:
+            filename: "{{ inventory_hostname }}.txt"
+            dir_path: "{{ git_branch }}"
+    when: ansible_network_os == 'ios'  
+
+  - name: "ASA Devices"
+    block:
+      - name: "3.0: Backup Cisco ASA devices From Inventory"
+        asa_config:
+          backup: yes
+          backup_options:
+            filename: "{{ inventory_hostname }}.txt"
+            dir_path: "{{ git_branch }}"
+    when: ansible_network_os == 'asa'
+
+  - name: 3.0 Check the directory status
+    command: git status
+    args:
+      chdir: "{{ git_branch }}"
+    register: changes
+    changed_when: false
+    delegate_to: localhost
+    run_once: yes
+
+  - name: 3.1 Add files to Git staging area, commit and push
+    shell: |
+      git add .
+      git commit -m "{{ timestamp }}"
+      git push origin
+    args:
+      chdir: "{{ git_branch }}"
+    delegate_to: localhost
+    run_once: yes  

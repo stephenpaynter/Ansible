@@ -1,0 +1,9 @@
+---
+
+- name: Configuration Backup Pre Change
+  hosts: lab
+  gather_facts: no
+    
+  roles:
+    - ansible-role-backuptogit
+
