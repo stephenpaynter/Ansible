@@ -7,12 +7,15 @@ Advantages of Ansible Roles:
 Reusability:   
 The primary benefit of using Ansible Roles is their reusability. By encapsulating a particular functionality or configuration into a role, it becomes possible to leverage that code across multiple projects, environments, and hosts.   
 This approach drastically reduces the need to duplicate tasks and playbooks, promoting consistency and saving time.  
+  
 Modular Design:   
 Roles follow a modular design pattern, allowing the segregation of tasks based on their purpose. This modular approach enhances code organization and makes it easier to understand, maintain, and extend the automation codebase.   
 Roles also promote collaboration by providing a clear structure for sharing code among team members.  
+  
 Code Consistency:   
 Ansible Roles ensure consistency in configurations by defining standard tasks, variables, and templates. This consistency eliminates configuration drift and reduces the chances of misconfigurations or errors.   
-When updates or modifications are required, changes made to a role automatically propagate across all playbooks that reference it, ensuring uniformity in configuration management.  
+When updates or modifications are required, changes made to a role automatically propagate across all playbooks that reference it, ensuring uniformity in configuration management. 
+  
 Easy Integration:   
 Ansible Roles seamlessly integrate with existing playbooks, allowing for smooth integration of new functionality. By importing a role into a playbook, the defined tasks and variables are readily available for execution.   
 This integration simplifies playbook development and promotes code reuse by utilizing established roles without reinventing the wheel.  
