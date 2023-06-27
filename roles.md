@@ -91,7 +91,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >To further enhance the utilization of standardized variables and promote best practices, establishing a Blueprints repository can be immensely beneficial.   
 >The Blueprints repository serves as a centralized location for documenting variable standards, Ansible roles, and associated guidelines.   
   
-#### Here's how the Blueprints repository can assist in maintaining coding standards:    
+#### Blueprints Repository    
 
 >#### Variable Documentation:   
 >The Blueprints repository should include comprehensive documentation detailing the standardized variable names, data types, and usage guidelines.   
@@ -150,20 +150,20 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >Actively implementing feedback and incorporating suggestions from code reviewers ensures continual growth and refinement of the Ansible codebase.  
 
 #### Organizing Roles:  
-A well-organized role structure is essential for clarity and maintainability. Follow this directory structure:  
+>A well-organized role structure is essential for clarity and maintainability. Follow this directory structure:  
 
-```yaml
-roles/
-   └── role_name/
-       ├── tasks/
-       ├── handlers/
-       ├── templates/
-       ├── files/
-       ├── vars/
-       ├── defaults/
-       ├── meta/
-       └── tests/
-```
+>```yaml
+>roles/
+>   └── role_name/
+>       ├── tasks/
+>       ├── handlers/
+>       ├── templates/
+>       ├── files/
+>       ├── vars/
+>       ├── defaults/
+>       ├── meta/
+>       └── tests/
+>```
 
 tasks/: Contains the main tasks that define the role's functionality.
 handlers/: Stores handlers, which are triggered by specific events.
