@@ -192,7 +192,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
   
 >Example: Defining role dependencies for a web server role:  
 >```yaml  
-# meta/main.yml  
+>in meta/main.yml  
 >dependencies:  
 >  - { role: common, tags: ["common"] }  
 >  - { role: nginx, tags: ["web"] }  
