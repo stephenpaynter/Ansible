@@ -67,28 +67,29 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 
 #### Standardized Variables in Ansible Roles:  
 
-In Ansible, variables serve as a fundamental building block for configuration management. They allow for dynamic values, customization, and adaptability across playbooks and roles. 
-However, without standardized variables, code maintenance and collaboration can become challenging. By adopting standardized variables, we can overcome these challenges and reap several benefits:
+>In Ansible, variables serve as a fundamental building block for configuration management. They allow for dynamic values, customization, and adaptability across playbooks and roles. 
+>However, without standardized variables, code maintenance and collaboration can become challenging.  
+>By adopting standardized variables, we can overcome these challenges and reap several benefits:  
 
-Consistency and Readability: 
-Standardized variables ensure a uniform naming convention and structure throughout playbooks and roles. This consistency enhances code readability and makes it easier for team members to understand and contribute to the codebase.   
-Developers familiar with the standards can quickly identify variable usages and their intended purpose.  
+>#### Consistency and Readability: 
+>Standardized variables ensure a uniform naming convention and structure throughout playbooks and roles. This consistency enhances code readability and makes it easier for team members to understand and contribute to the codebase.   
+>Developers familiar with the standards can quickly identify variable usages and their intended purpose.  
   
-Reusability:   
-Standardized variables facilitate the reusability of code. When multiple playbooks or roles adopt the same variable standards, it becomes easier to share and integrate code across projects.   
-This reusability saves time and effort, reduces code duplication, and promotes efficient infrastructure management.  
+>#### Reusability:   
+>Standardized variables facilitate the reusability of code. When multiple playbooks or roles adopt the same variable standards, it becomes easier to share and integrate code across projects.   
+>This reusability saves time and effort, reduces code duplication, and promotes efficient infrastructure management.  
   
-Maintainability:   
-With standardized variables, maintaining Ansible code becomes more manageable. When updates or modifications are required, developers can rely on consistent variable naming and structures, minimizing the risk of introducing errors.   
-Additionally, standardized variables simplify troubleshooting, as issues can be quickly identified and resolved due to their predictable nature.  
+>#### Maintainability:   
+>With standardized variables, maintaining Ansible code becomes more manageable. When updates or modifications are required, developers can rely on consistent variable naming and structures, minimizing the risk of introducing errors.   
+>Additionally, standardized variables simplify troubleshooting, as issues can be quickly identified and resolved due to their predictable nature.  
   
-Collaboration:   
-Standardized variables foster collaboration within a team. By adhering to predefined variable standards, team members can easily understand and work with each other's code.   
-This collaboration improves efficiency, reduces misunderstandings, and promotes a unified approach to infrastructure automation.  
+>#### Collaboration:   
+>Standardized variables foster collaboration within a team. By adhering to predefined variable standards, team members can easily understand and work with each other's code.   
+>This collaboration improves efficiency, reduces misunderstandings, and promotes a unified approach to infrastructure automation.  
   
-Blueprints Repository:   
-To further enhance the utilization of standardized variables and promote best practices, establishing a Blueprints repository can be immensely beneficial.   
-The Blueprints repository serves as a centralized location for documenting variable standards, Ansible roles, and associated guidelines.   
+>#### Blueprints Repository:   
+>To further enhance the utilization of standardized variables and promote best practices, establishing a Blueprints repository can be immensely beneficial.   
+>The Blueprints repository serves as a centralized location for documenting variable standards, Ansible roles, and associated guidelines.   
   
 Here's how the Blueprints repository can assist in maintaining coding standards:    
 
