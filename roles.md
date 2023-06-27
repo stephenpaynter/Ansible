@@ -50,18 +50,22 @@ This documentation aids in understanding and encourages collaboration among team
   
 To leverage reusable Ansible Roles effectively, follow these steps:  
 
-Role Installation: 
-Roles can be installed from various sources such as Ansible Galaxy, Git repositories, or local paths. Install the required roles using the appropriate installation method before referencing them in playbooks.
-Playbook Integration: 
-Integrate roles into playbooks by specifying the role's name within the roles section of a playbook. This tells Ansible which roles to import and utilize for the playbook execution.
-Role Parameters: 
-Customize role behavior by overriding default variables or providing specific values for role parameters within the playbook. This flexibility allows the role to adapt to different requirements while still leveraging the underlying reusable code.
-Playbook Execution: 
-Execute playbooks as usual, and Ansible will automatically execute the tasks defined within the imported roles. The reusable code encapsulated within the roles will be executed, resulting in consistent configuration and desired outcomes.
-Role Updates: 
-If updates or modifications are required in a role, make the changes within the role's directory structure. The updated role will then be automatically propagated across all playbooks that reference it, ensuring consistency in configuration management.
+#### Role Installation: 
+Roles can be installed from various sources such as Ansible Galaxy, Git repositories, or local paths. Install the required roles using the appropriate installation method before referencing them in playbooks.  
+  
+#### Playbook Integration:   
+Integrate roles into playbooks by specifying the role's name within the roles section of a playbook. This tells Ansible which roles to import and utilize for the playbook execution.  
+  
+#### Role Parameters:   
+Customize role behavior by overriding default variables or providing specific values for role parameters within the playbook. This flexibility allows the role to adapt to different requirements while still leveraging the underlying reusable code.  
+  
+#### Playbook Execution:   
+Execute playbooks as usual, and Ansible will automatically execute the tasks defined within the imported roles. The reusable code encapsulated within the roles will be executed, resulting in consistent configuration and desired outcomes.  
+  
+#### Role Updates:   
+If updates or modifications are required in a role, make the changes within the role's directory structure. The updated role will then be automatically propagated across all playbooks that reference it, ensuring consistency in configuration management.  
 
-Standardized Variables in Ansible Roles:
+#### Standardized Variables in Ansible Roles:  
 
 In Ansible, variables serve as a fundamental building block for configuration management. They allow for dynamic values, customization, and adaptability across playbooks and roles. 
 However, without standardized variables, code maintenance and collaboration can become challenging. By adopting standardized variables, we can overcome these challenges and reap several benefits:
