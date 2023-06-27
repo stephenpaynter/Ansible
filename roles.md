@@ -221,7 +221,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >#### Use Handlers:
 >
 
-#### Role Handlers:     
+>#### Role Handlers:     
 >Handlers allow triggering specific actions in response to events. Define handlers in the handlers/main.yml file and notify them from tasks.
    
 >```yaml 
@@ -232,7 +232,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >    state: restarted
 >```
   
-#### Role Tags:  
+>#### Role Tags:  
 >Tags provide a convenient way to execute specific tasks or roles. Assign tags to tasks within a role and execute them selectively during playbook runs.  
   
 >Example: Assigning tags to tasks within a role:  
