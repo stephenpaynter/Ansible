@@ -109,45 +109,47 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >The Blueprints repository should encourage feedback and suggestions from the team.   
 >Regular reviews and discussions allow for continuous improvement of variable standards and associated role templates, ensuring they remain up-to-date with evolving requirements and industry best practices.  
   
-Standardizing Ansible coding techniques not only improves code readability and maintainability but also simplifies collaboration and the implementation of future enhancements.   
-The following techniques should be used to help facilitate efficient code review with Roles and to streamline the process of implementing enhancements.  
+#### Role Standards
+
+>Standardizing Ansible coding techniques not only improves code readability and maintainability but also simplifies collaboration and the implementation of future enhancements.   
+>The following techniques should be used to help facilitate efficient code review within Roles and to streamline the process of implementing enhancements.  
   
-Consistent Playbook Structure:  
-Establishing a consistent playbook structure is vital for code readability and review. By defining a standardized playbook structure, all team members can easily navigate and understand the codebase.   
-A recommended playbook structure may include clear sections such as variables, tasks, handlers, roles, and templates. This structure provides a logical flow and aids in code review, making it easier to identify and address issues.  
+>#### Consistent Playbook Structure:  
+>Establishing a consistent playbook structure is vital for code readability and review. By defining a standardized playbook structure, all team members can easily navigate and understand the codebase.   
+>A recommended playbook structure may include clear sections such as variables, tasks, handlers, roles, and templates. This structure provides a logical flow and aids in code review, making it easier to identify and address issues.  
 
-Proper Use of Ansible Modules:  
-Adhering to best practices when using Ansible modules improves code quality and maintainability. It is important to choose the most appropriate modules for specific tasks and avoid unnecessary complexity.   
-Additionally, consistently documenting the purpose and usage of each module helps reviewers understand the intentions behind module selection and promotes clarity.  
+>#### Proper Use of Ansible Modules:  
+>Adhering to best practices when using Ansible modules improves code quality and maintainability. It is important to choose the most appropriate modules for specific tasks and avoid unnecessary complexity.   
+>Additionally, consistently documenting the purpose and usage of each module helps reviewers understand the intentions behind module selection and promotes clarity.  
 
-Well-Defined Variable Naming Conventions:  
-Standardizing variable naming conventions enhances code readability and understanding. Employing a consistent naming convention for variables, such as using lowercase with underscores or camel case, ensures clarity and reduces confusion.   
-Moreover, documenting the purpose and usage of variables in comments or in a centralized repository aids code reviewers in comprehending the code and implementing enhancements effectively.  
+>#### Well-Defined Variable Naming Conventions:  
+>Standardizing variable naming conventions enhances code readability and understanding. Employing a consistent naming convention for variables, such as using lowercase with underscores or camel case, ensures clarity and reduces confusion.   
+>Moreover, documenting the purpose and usage of variables in comments or in a centralized repository aids code reviewers in comprehending the code and implementing enhancements effectively.  
 
-Code Documentation:  
-Thorough code documentation is crucial for easy code review and enhancement implementation. Documenting the intent and functionality of each task, handler, and role enhances comprehension and promotes consistency.   
-Additionally, including inline comments that explain complex logic or specific implementation details assists reviewers in understanding the code and its purpose. The use of clear and concise comments reduces ambiguity and facilitates code enhancements.  
+>#### Code Documentation:  
+>Thorough code documentation is crucial for easy code review and enhancement implementation. Documenting the intent and functionality of each task, handler, and role enhances comprehension and promotes consistency.   
+>Additionally, including inline comments that explain complex logic or specific implementation details assists reviewers in understanding the code and its purpose. The use of clear and concise comments reduces ambiguity and facilitates code enhancements.  
 
-Modularity and Reusability:    
-Encouraging modularity and reusability in Ansible code simplifies code review and promotes efficient enhancements. Break down complex tasks into reusable, smaller tasks that can be utilized across multiple playbooks or roles.  
-Leveraging Ansible roles further enhances modularity and code reuse. By defining standardized roles for specific functionalities, reviewers can easily assess the role's purpose, implementation, and integration with other parts of the codebase.  
+>#### Modularity and Reusability:    
+>Encouraging modularity and reusability in Ansible code simplifies code review and promotes efficient enhancements. Break down complex tasks into reusable, smaller tasks that can be utilized across multiple playbooks or roles.  
+>Leveraging Ansible roles further enhances modularity and code reuse. By defining standardized roles for specific functionalities, reviewers can easily assess the role's purpose, implementation, and integration with other parts of the codebase.  
 
-Version Control and Peer Review:  
-Leveraging version control systems, such as Git, ensures code integrity and promotes collaborative code review.   
-By adopting a branching model and employing pull requests, team members can review and provide feedback on code changes before merging them into the main branch.   
-Peer review not only identifies potential issues but also helps maintain coding standards and facilitates the implementation of enhancements.  
+>#### ersion Control and Peer Review:  
+>Leveraging version control systems, such as Git, ensures code integrity and promotes collaborative code review.   
+>By adopting a branching model and employing pull requests, team members can review and provide feedback on code changes before merging them into the main branch.   
+>Peer review not only identifies potential issues but also helps maintain coding standards and facilitates the implementation of enhancements.  
 
-Continuous Integration and Testing:  
-Implementing continuous integration (CI) pipelines and automated testing helps ensure code quality and facilitates the implementation of enhancements.   
-CI pipelines enable automatic code validation, including checks for syntax errors, linting, and style conformity.   
-Automated testing, such as unit tests or integration tests, provides confidence in code functionality and aids in identifying issues early on.   
-Maintaining a robust testing framework as part of the standardized coding techniques streamlines code review and enhancement processes.  
+>#### Continuous Integration and Testing:  
+>Implementing continuous integration (CI) pipelines and automated testing helps ensure code quality and facilitates the implementation of enhancements.   
+>CI pipelines enable automatic code validation, including checks for syntax errors, linting, and style conformity.   
+>Automated testing, such as unit tests or integration tests, provides confidence in code functionality and aids in identifying issues early on.   
+>Maintaining a robust testing framework as part of the standardized coding techniques streamlines code review and enhancement processes.  
 
-Learning from Code Review Feedback:  
-Code review should be seen as a learning opportunity for all team members. Encourage open discussions and feedback to improve coding techniques and adhere to coding standards.  
-Actively implementing feedback and incorporating suggestions from code reviewers ensures continual growth and refinement of the Ansible codebase.  
+>#### Learning from Code Review Feedback:  
+>Code review should be seen as a learning opportunity for all team members. Encourage open discussions and feedback to improve coding techniques and adhere to coding standards.  
+>Actively implementing feedback and incorporating suggestions from code reviewers ensures continual growth and refinement of the Ansible codebase.  
 
-Organizing Roles:  
+#### Organizing Roles:  
 A well-organized role structure is essential for clarity and maintainability. Follow this directory structure:  
 
 ```yaml
