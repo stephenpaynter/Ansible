@@ -91,23 +91,23 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >To further enhance the utilization of standardized variables and promote best practices, establishing a Blueprints repository can be immensely beneficial.   
 >The Blueprints repository serves as a centralized location for documenting variable standards, Ansible roles, and associated guidelines.   
   
-Here's how the Blueprints repository can assist in maintaining coding standards:    
+#### Here's how the Blueprints repository can assist in maintaining coding standards:    
 
-Variable Documentation:   
-The Blueprints repository should include comprehensive documentation detailing the standardized variable names, data types, and usage guidelines.   
-This documentation helps developers understand the purpose and intended usage of each variable, promoting consistent implementation.  
+>#### Variable Documentation:   
+>The Blueprints repository should include comprehensive documentation detailing the standardized variable names, data types, and usage guidelines.   
+>This documentation helps developers understand the purpose and intended usage of each variable, promoting consistent implementation.  
   
-Role Templates and Examples:   
-The Blueprints repository can provide ready-to-use Ansible role templates that adhere to the defined variable standards. These templates serve as starting points for new role development and enable developers to quickly adopt best practices.   
-Additionally, including examples of properly implemented roles helps illustrate how standardized variables should be utilized within different scenarios.  
+>#### Role Templates and Examples:   
+>The Blueprints repository can provide ready-to-use Ansible role templates that adhere to the defined variable standards. These templates serve as starting points for new role development and enable developers to quickly adopt best practices.   
+>Additionally, including examples of properly implemented roles helps illustrate how standardized variables should be utilized within different scenarios.  
 
-Version Control and Collaboration:   
-The Blueprints repository should leverage version control systems like Git to track changes and enable collaboration among team members.   
-By utilizing branching, pull requests, and code review processes, the repository ensures that all changes to standardized variables and roles adhere to predefined standards before being merged into the main codebase.  
+>#### Version Control and Collaboration:   
+>The Blueprints repository should leverage version control systems like Git to track changes and enable collaboration among team members.   
+>By utilizing branching, pull requests, and code review processes, the repository ensures that all changes to standardized variables and roles adhere to predefined standards before being merged into the main codebase.  
 
-Continuous Improvement:   
-The Blueprints repository should encourage feedback and suggestions from the team.   
-Regular reviews and discussions allow for continuous improvement of variable standards and associated role templates, ensuring they remain up-to-date with evolving requirements and industry best practices.  
+>#### Continuous Improvement:   
+>The Blueprints repository should encourage feedback and suggestions from the team.   
+>Regular reviews and discussions allow for continuous improvement of variable standards and associated role templates, ensuring they remain up-to-date with evolving requirements and industry best practices.  
   
 Standardizing Ansible coding techniques not only improves code readability and maintainability but also simplifies collaboration and the implementation of future enhancements.   
 The following techniques should be used to help facilitate efficient code review with Roles and to streamline the process of implementing enhancements.  
