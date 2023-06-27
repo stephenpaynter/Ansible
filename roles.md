@@ -275,3 +275,62 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >  version: 1.2.0
 >  # ...
 >  ```
+
+#### Role Naming Standards:  
+  
+>Naming Ansible roles appropriately is a critical. A well-chosen role name conveys its purpose, facilitates collaboration, and promotes code readability.   
+>Use the following guidelines for naming Ansible roles to create consistent role naming conventions.  
+    
+>#### Descriptive and Intuitive Role Names:  
+>Choose role names that accurately reflect the role's purpose and functionality. A descriptive and intuitive name enables easy understanding and navigation within the codebase. 
+
+>Avoid generic or ambiguous names that might lead to confusion or misinterpretation.  
+
+>```
+>Example:
+  
+>Good: nginx (for an Nginx web server role)  
+>Avoid: web or server  
+>```
+
+#### Consistency and Standardization:
+Maintain a consistent naming convention across roles to establish a coherent codebase. Consistency aids in code readability, promotes collaboration, and simplifies maintenance. Establish naming standards or guidelines within your organization or team to ensure uniformity.
+Example:
+
+Role names should be in lowercase and use hyphens as word separators (e.g., nginx-role).
+#### Single Responsibility Principle:
+Adhere to the Single Responsibility Principle when defining role names. Each role should have a clear and focused purpose, addressing a specific functionality or task. Avoid combining multiple responsibilities within a single role, as it can lead to complexity and hinder code maintainability.
+Example:
+
+Good: nginx (for Nginx installation and configuration)
+Avoid: nginx-apache (combining two unrelated server technologies)
+Clear Role Prefixes:
+Consider using a consistent prefix to denote the role's category or technology. This helps in grouping and identifying related roles. However, be cautious not to make the prefix overly long or redundant if the role name already implies its category.
+Example:
+
+Good: db-postgresql (for a PostgreSQL database role)
+Avoid: database-postgresql (redundant prefix)
+Avoid Abbreviations and Acronyms:
+While brevity is desirable, it is important to avoid excessive abbreviations or acronyms that may lead to confusion. Opt for descriptive names that are easily understandable by all team members, including new members joining the project.
+Example:
+
+Good: database (clearly indicates a database-related role)
+Avoid: db (ambiguous and may not be immediately clear to everyone)
+Role Naming Context:
+Consider including context-specific information in the role name when necessary. This can help differentiate roles for specific environments, platforms, or configurations.
+Example:
+
+webserver-nginx (for an Nginx web server role specific to the webserver context)
+database-postgresql-prod (for a PostgreSQL database role specific to the production environment)
+Avoid Repetition and Redundancy:
+Ensure that the role name does not repeat information already conveyed by other elements in the codebase, such as the directory structure or documentation. Redundancy adds unnecessary complexity and can make the codebase harder to navigate.
+Example:
+
+Good: webserver-nginx (if the directory structure already implies it's a role for a web server)
+Avoid: webserver-nginx-role
+Singular Role Names:
+Prefer singular nouns for role names unless the role explicitly represents a group or collection.
+Example:
+
+Good: user (for a role managing individual user accounts)
+Avoid: users (unless the role deals with managing multiple users as a group)
