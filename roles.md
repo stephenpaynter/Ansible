@@ -366,3 +366,29 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >Good: user (for a role managing individual user accounts)    
 >Avoid: users (unless the role deals with managing multiple users as a group)    
 >```
+
+#### Check Mode And Debugging  
+  
+>Check mode is a powerful feature in Ansible that allows you to perform a dry run of your playbook or role without making any changes to the target system.  
+>It enables you to verify the changes that would be applied before actually applying them. This is particularly useful for debugging and validating your role's tasks and configurations.
+>
+>We should be developing code that can be easily ran in 'Check Mode' within AAP, to do this we need to use Idempotent modules and only use shell as a last resort.
+>
+>#### Leveraging Debug Variables:   
+Debug variables enable you to print specific values or information during playbook execution. They are particularly useful for troubleshooting and gaining insights into the state of variables and tasks at runtime.  
+>The most commonly used debug module is debug, which allows you to output variable values or custom messages to the Ansible console.  
+>  
+>#### Benefits of Debug Variables:  
+  
+>#### Variable validation:  
+>Debug variables provide a way to validate the values of variables at different stages of the playbook execution, ensuring that they have the expected values.  
+Task debugging: By selectively printing variable values or custom messages, you can gain insights into the execution flow and troubleshoot issues within specific tasks.  
+Conditional checks: Debug variables can help evaluate the conditionals in your playbook, allowing you to verify if certain tasks or actions are being executed as expected.
+>  
+#### Debugging Techniques:  
+>To leverage check mode and debug variables effectively, consider the following techniques:   
+>a. Printing Variable Values:  
+>Use debug variables to print the values of critical variables within tasks to ensure they have the expected values. This helps identify any inconsistencies or unexpected values that could lead to issues.  
+>   
+>c. Conditional Checks: 
+>Debug variables are useful for evaluating conditionals within your playbook or role. By printing custom messages or variable values within conditionals, you can verify if the condition is being evaluated correctly.  
