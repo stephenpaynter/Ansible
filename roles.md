@@ -165,56 +165,61 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >       └── tests/
 >```
 
-tasks/: Contains the main tasks that define the role's functionality.
-handlers/: Stores handlers, which are triggered by specific events.
-templates/: Contains Jinja2 templates for generating configuration files.
-files/: Stores static files that need to be copied to remote hosts.
-vars/: Contains variables specific to the role.
-defaults/: Defines default values for role variables.
-meta/: Contains metadata, including dependencies.
-tests/: Contains test cases to validate the role's functionality.
-
-Role Variables:
-Use variables to make roles flexible and adaptable. Leverage different variable files based on scope:
-
-vars/main.yml: Defines role-specific variables.
-defaults/main.yml: Provides default values for variables.
-vars/: Create additional variable files for specific environments or use cases.
-
-# vars/main.yml
-postgres_version: 13
-postgres_data_dir: /var/lib/postgresql/{{ postgres_version }}/main
-
-Role Dependencies:
-Leverage role dependencies to enhance reusability and modularity. Specify role dependencies in the meta/main.yml file.
-
-Example: Defining role dependencies for a web server role:
-
-# meta/main.yml
-dependencies:
-  - { role: common, tags: ["common"] }
-  - { role: nginx, tags: ["web"] }
-
-Task Segmentation:
-Break down complex tasks into smaller, reusable tasks within a role. This improves modularity and simplifies maintenance and troubleshooting.
-
-Example: Segmented tasks for installing and configuring Nginx
-
-# tasks/main.yml
-- name: Install Nginx
-  apt:
-    name: nginx
-    state: present
-
-- name: Configure Nginx
-  template:
-    src: nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
-    mode: 0644
-  notify:
-    - restart nginx
-
-Use Handlers:
+>tasks/: Contains the main tasks that define the role's functionality.  
+>handlers/: Stores handlers, which are triggered by specific events.  
+>templates/: Contains Jinja2 templates for generating configuration files.  
+>files/: Stores static files that need to be copied to remote hosts.  
+>vars/: Contains variables specific to the role.  
+>defaults/: Defines default values for role variables.  
+>meta/: Contains metadata, including dependencies.  
+>tests/: Contains test cases to validate the role's functionality.  
+  
+>#### Role Variables:  
+>Use variables to make roles flexible and adaptable. Leverage different variable files based on scope:
+>
+>
+>vars/main.yml: Defines role-specific variables.  
+>defaults/main.yml: Provides default values for variables.  
+>vars/: Create additional variable files for specific environments or use cases.
+>`
+>```yaml  
+># vars/main.yml  
+>postgres_version: 13  
+>postgres_data_dir: /var/lib/postgresql/{{ postgres_version }}/main  
+>```
+>#### Role Dependencies:  
+>Leverage role dependencies to enhance reusability and modularity. Specify role dependencies in the meta/main.yml file.
+  
+>Example: Defining role dependencies for a web server role:  
+>```yaml  
+# meta/main.yml  
+>dependencies:  
+>  - { role: common, tags: ["common"] }  
+>  - { role: nginx, tags: ["web"] }  
+>```
+  
+#### Task Segmentation:   
+>Break down complex tasks into smaller, reusable tasks within a role. This improves modularity and simplifies maintenance and troubleshooting.  
+  
+>Example: Segmented tasks for installing and configuring Nginx  
+  
+>```yaml  
+># tasks/main.yml
+>- name: Install Nginx
+>  apt:
+>    name: nginx
+>    state: present
+>  
+>- name: Configure Nginx
+>  template:
+>    src: nginx.conf.j2
+>    dest: /etc/nginx/nginx.conf
+>    mode: 0644
+>  notify:
+>    - restart nginx
+>  
+>#### Use Handlers:
+>
 Handlers allow triggering specific actions in response to events. Define handlers in the handlers/main.yml file and notify them from tasks.
 
 # handlers/main.yml
@@ -239,7 +244,7 @@ Example: Assigning tags to tasks within a role:
   tags:
     - packages
 
-Using Role Variables in Templates:
+>#### Using Role Variables in Templates:
 Leverage role variables within templates to generate dynamic configuration files.
 
 Example: Using role variables in an Nginx configuration template:
