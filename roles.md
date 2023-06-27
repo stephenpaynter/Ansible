@@ -357,7 +357,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >Avoid: webserver-nginx-role   
 >```  
   
-#### Singular Role Names:  
+>#### Singular Role Names:  
 >Prefer singular nouns for role names unless the role explicitly represents a group or collection.
    
 >```
