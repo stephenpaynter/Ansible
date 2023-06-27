@@ -393,5 +393,7 @@ Conditional checks: Debug variables can help evaluate the conditionals in your p
 >a. Printing Variable Values:  
 >Use debug variables to print the values of critical variables within tasks to ensure they have the expected values. This helps identify any inconsistencies or unexpected values that could lead to issues.  
 >   
->c. Conditional Checks: 
->Debug variables are useful for evaluating conditionals within your playbook or role. By printing custom messages or variable values within conditionals, you can verify if the condition is being evaluated correctly.  
+>b. Conditional Checks: 
+>Debug variables are useful for evaluating conditionals within your playbook or role. By printing custom messages or variable values within conditionals, you can verify if the condition is being evaluated correctly.
+>
+>NEED DETAILS HERE RE CURRENT DEBUGGING ENVVAR
