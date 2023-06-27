@@ -220,53 +220,32 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >  
 >#### Use Handlers:
 >
-Handlers allow triggering specific actions in response to events. Define handlers in the handlers/main.yml file and notify them from tasks.
 
-# handlers/main.yml
-- name: restart nginx
-  service:
-    name: nginx
-    state: restarted
+#### Role Handlers:     
+>Handlers allow triggering specific actions in response to events. Define handlers in the handlers/main.yml file and notify them from tasks.
+   
+>```yaml 
+># handlers/main.yml
+>- name: restart nginx
+>  service:
+>    name: nginx
+>    state: restarted
+>```
+  
+#### Role Tags:  
+>Tags provide a convenient way to execute specific tasks or roles. Assign tags to tasks within a role and execute them selectively during playbook runs.  
+  
+>Example: Assigning tags to tasks within a role:  
 
-Role Tags:
-Tags provide a convenient way to execute specific tasks or roles. Assign tags to tasks within a role and execute them selectively during playbook runs.
-
-Example: Assigning tags to tasks within a role:
-
-# tasks/main.yml
-- name: Install packages
-  apt:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - package1
-    - package2
-  tags:
-    - packages
-
->#### Using Role Variables in Templates:
-Leverage role variables within templates to generate dynamic configuration files.
-
-Example: Using role variables in an Nginx configuration template:
-
-user www-data;
-worker_processes auto;
-pid /run/nginx.pid;
-
-events {
-  worker_connections 1024;
-}
-
-http {
-  server {
-    listen 80;
-    server_name {{ nginx_server_name }};
-    
-    root /var/www/html;
-    index index.html;
-    
-    location / {
-      try_files $uri $uri/ =404;
-    }
-  }
-}
+>```yaml   
+># tasks/main.yml
+>- name: Install packages
+>  apt:
+>    name: "{{ item }}"
+>    state: present
+>  with_items:
+>    - package1
+>    - package2
+>  tags:
+>    - packages
+>```yaml
