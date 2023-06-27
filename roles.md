@@ -263,9 +263,9 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >#### Rollbacks and Disaster Recovery:  
 >In the event of issues or failures, role versioning allows for rollbacks to a previous stable version. This ensures quick recovery and minimizes downtime by reverting to a known working state.
 
->Role Metadata:
->Metadata could be usedin the role's meta/main.yml file to provide information about the role, including the version.
->Update the version field with each role modification or enhancement.
+#### Role Metadata:  
+>Metadata could be usedin the role's meta/main.yml file to provide information about the role, including the version.  
+>Update the version field with each role modification or enhancement.  
 >
 >```yaml  
 ># meta/main.yml
