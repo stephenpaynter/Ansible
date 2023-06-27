@@ -381,12 +381,15 @@ Debug variables enable you to print specific values or information during playbo
 >#### Benefits of Debug Variables:  
   
 >#### Variable validation:  
->Debug variables provide a way to validate the values of variables at different stages of the playbook execution, ensuring that they have the expected values.  
-Task debugging: By selectively printing variable values or custom messages, you can gain insights into the execution flow and troubleshoot issues within specific tasks.  
-Conditional checks: Debug variables can help evaluate the conditionals in your playbook, allowing you to verify if certain tasks or actions are being executed as expected.
+>Debug variables provide a way to validate the values of variables at different stages of the playbook execution, ensuring that they have the expected values.
 >  
+>Task debugging:  
+>By selectively printing variable values or custom messages, you can gain insights into the execution flow and troubleshoot issues within specific tasks.  
+Conditional checks: Debug variables can help evaluate the conditionals in your playbook, allowing you to verify if certain tasks or actions are being executed as expected.
+>    
 #### Debugging Techniques:  
->To leverage check mode and debug variables effectively, consider the following techniques:   
+>To leverage check mode and debug variables effectively, consider the following techniques:
+>  
 >a. Printing Variable Values:  
 >Use debug variables to print the values of critical variables within tasks to ensure they have the expected values. This helps identify any inconsistencies or unexpected values that could lead to issues.  
 >   
