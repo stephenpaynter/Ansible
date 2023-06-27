@@ -287,7 +287,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >Avoid generic or ambiguous names that might lead to confusion or misinterpretation.  
 
 >```
->Example:
+>Example
   
 >Good: nginx (for an Nginx web server role)  
 >Avoid: web or server  
