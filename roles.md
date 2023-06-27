@@ -303,7 +303,8 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
   
 >#### Single Responsibility Principle:  
 >Adhere to the Single Responsibility Principle when defining role names. Each role should have a clear and focused purpose, addressing a specific functionality or task.   
->Avoid combining multiple responsibilities within a single role, as it can lead to complexity and hinder code maintainability.  
+>Avoid combining multiple responsibilities within a single role, as it can lead to complexity and hinder code maintainability.
+    
 >Example:  
 >```
 >Good: nginx (for Nginx installation and configuration)  
@@ -312,41 +313,48 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
   
 >#### Clear Role Prefixes:  
 >Consider using a consistent prefix to denote the role's category or technology. This helps in grouping and identifying related roles.  
->However, be cautious not to make the prefix overly long or redundant if the role name already implies its category.  
+>However, be cautious not to make the prefix overly long or redundant if the role name already implies its category.
+  
 >Example:  
 >```
 >Good: db-postgresql (for a PostgreSQL database role)  
 >Avoid: database-postgresql (redundant prefix)  
 >```
+  
 >#### Avoid Abbreviations and Acronyms:   
 >While brevity is desirable, it is important to avoid excessive abbreviations or acronyms that may lead to confusion.  
->Opt for descriptive names that are easily understandable by all team members, including new members joining the project.  
+>Opt for descriptive names that are easily understandable by all team members, including new members joining the project.
+  
 >Example:  
-
-Good: database (clearly indicates a database-related role)  
-Avoid: db (ambiguous and may not be immediately clear to everyone)  
+>```
+>Good: database (clearly indicates a database-related role)  
+>Avoid: db (ambiguous and may not be immediately clear to everyone)  
+>```
   
 >#### Role Naming Context:  
 Consider including context-specific information in the role name when necessary. This can help differentiate roles for specific environments, platforms, or configurations.  
 Example:  
+  
 >```
 >webserver-nginx (for an Nginx web server role specific to the webserver context)  
 >database-postgresql-prod (for a PostgreSQL database role specific to the production environment)   
->```
+>```  
   
 >#### Avoid Repetition and Redundancy:  
 >Ensure that the role name does not repeat information already conveyed by other elements in the codebase, such as the directory structure or documentation.   
->Redundancy adds unnecessary complexity and can make the codebase harder to navigate.  
+>Redundancy adds unnecessary complexity and can make the codebase harder to navigate.
+  
 >Example:  
 >```
-Good: webserver-nginx (if the directory structure already implies it's a role for a web server)  
-Avoid: webserver-nginx-role  
->```
+>Good: webserver-nginx (if the directory structure already implies it's a role for a web server)  
+>Avoid: webserver-nginx-role   
+>```  
   
 #### Singular Role Names:  
 >Prefer singular nouns for role names unless the role explicitly represents a group or collection.  
->Example:  
+>Example:
+  
 >```
-Good: user (for a role managing individual user accounts)  
-Avoid: users (unless the role deals with managing multiple users as a group)  
+Good: user (for a role managing individual user accounts)    
+Avoid: users (unless the role deals with managing multiple users as a group)    
 >```
