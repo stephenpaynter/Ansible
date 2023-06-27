@@ -122,6 +122,7 @@ Actively implementing feedback and incorporating suggestions from code reviewers
 Organizing Roles:
 A well-organized role structure is essential for clarity and maintainability. Follow this directory structure:
 
+```yaml
 roles/
    └── role_name/
        ├── tasks/
@@ -132,6 +133,7 @@ roles/
        ├── defaults/
        ├── meta/
        └── tests/
+```
 
 tasks/: Contains the main tasks that define the role's functionality.
 handlers/: Stores handlers, which are triggered by specific events.
