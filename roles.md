@@ -187,7 +187,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >postgres_version: 13  
 >postgres_data_dir: /var/lib/postgresql/{{ postgres_version }}/main  
 >```
-#### Role Dependencies:  
+>#### Role Dependencies:  
 >Leverage role dependencies to enhance reusability and modularity. Specify role dependencies in the meta/main.yml file.
   
 >Example: Defining role dependencies for a web server role:  
@@ -198,7 +198,7 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >  - { role: nginx, tags: ["web"] }  
 >```
   
-#### Task Segmentation:   
+>#### Task Segmentation:   
 >Break down complex tasks into smaller, reusable tasks within a role. This improves modularity and simplifies maintenance and troubleshooting.  
   
 >Example: Segmented tasks for installing and configuring Nginx  
