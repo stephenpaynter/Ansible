@@ -1,4 +1,4 @@
-###Understanding Ansible Roles:  
+### Understanding Ansible Roles:  
 
 Ansible Roles are a way to organize and package automation code into logical units. They provide a structured approach for defining tasks, handlers, variables, templates, and other components required to configure a specific aspect of a system.   
 Roles encapsulate a set of Ansible tasks, allowing them to be easily shared across different playbooks and play environments.  
