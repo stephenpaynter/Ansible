@@ -363,6 +363,6 @@ Roles encapsulate a set of Ansible tasks, allowing them to be easily shared acro
 >```
 >Example  
 >  
-Good: user (for a role managing individual user accounts)    
-Avoid: users (unless the role deals with managing multiple users as a group)    
+>Good: user (for a role managing individual user accounts)    
+>Avoid: users (unless the role deals with managing multiple users as a group)    
 >```
