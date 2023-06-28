@@ -77,7 +77,6 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 >To override variables at runtime, pass them as extra variables using the -e flag or through an inventory file.   
 
 >For example:
->  
 >```
 ansible-playbook my_playbook.yml -e "my_variable=new_value"  
 >```
