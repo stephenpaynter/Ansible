@@ -44,14 +44,14 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 >For example:  
 
 >```
-- name: Playbook-level variable declaration
-  hosts: localhost
-  gather_facts: false
-  vars:
-    my_variable: "value"
-  tasks:
-    - debug:
-        var: my_variable
+>- name: Playbook-level variable declaration
+>  hosts: localhost
+>  gather_facts: false
+>  vars:
+>    my_variable: "value"
+>  tasks:
+>    - debug:
+>        var: my_variable
 >```
 
 >#### Role-Level Variable Declaration:  
