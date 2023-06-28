@@ -5,7 +5,8 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 
 >#### Best Practices for Using Variables and Variable Declaration in Ansible  
 
->Consistent Variable Naming:  
+>Consistent Variable Naming:
+>  
 >Maintaining a consistent naming convention for variables improves readability and reduces confusion.   
 >Consider using lowercase letters with underscores (_) to separate words in variable names. For example:  
 
@@ -35,12 +36,14 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 >        my_variable: "value"
 >```
 >  
->#### Playbook-Level Variable Declaration:  
-Defining variables at the playbook level using the vars keyword makes them accessible across all tasks within the playbook.  
-This approach helps maintain consistency and simplifies playbook maintenance.  
+>#### Playbook-Level Variable Declaration:
+>
+>Defining variables at the playbook level using the vars keyword makes them accessible across all tasks within the playbook.  
+>This approach helps maintain consistency and simplifies playbook maintenance.  
 
-For example:  
+>For example:  
 
+>```
 - name: Playbook-level variable declaration
   hosts: localhost
   gather_facts: false
@@ -49,21 +52,21 @@ For example:
   tasks:
     - debug:
         var: my_variable
+>```
 
+>#### Role-Level Variable Declaration:  
+>When working with roles, declare variables within the defaults/main.yml file of the role.  
+>This ensures that the variables are accessible within the role and can be easily overridden by users.   
 
-Role-Level Variable Declaration:  
-When working with roles, declare variables within the defaults/main.yml file of the role.  
-This ensures that the variables are accessible within the role and can be easily overridden by users.   
+>For example:  
+>```
+># Role: my_role
+># Path: roles/my_role/defaults/main.yml
+>
+>my_variable: "default_value"
+>```
 
-For example:  
-
-# Role: my_role
-# Path: roles/my_role/defaults/main.yml
-
-my_variable: "default_value"
-
-
-Variable Precedence and Overriding:  
+>#### Variable Precedence and Overriding:  
 Ansible follows a specific order of precedence when resolving variables. Understanding this order is essential to ensure desired variable values. 
 The order of precedence, from highest to lowest, is as follows:    
 Variables defined explicitly in the task.    
@@ -75,11 +78,11 @@ For example:
   
 ansible-playbook my_playbook.yml -e "my_variable=new_value"  
 
-Variable Encryption:
+>#### Variable Encryption:
 Sensitive information such as passwords, API keys, or private keys should be encrypted when stored in variables. 
 Ansible provides the ansible-vault command to encrypt and decrypt files containing sensitive data. Avoid storing plaintext sensitive information in variable files or playbooks.  
   
-Variable Files and Organization:  
+>#### Variable Files and Organization:  
 Organizing variable files can greatly improve playbook maintenance and readability. Consider the following recommendations:  
 Use separate variable files for different environments or specific roles.  
 Group related variables within the same file.  
