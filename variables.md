@@ -16,6 +16,8 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >#### Good practice
 >my_variable = "value"
 
+>May be worth setting standarsd for initial variable declaration and set_fact. If a variable is set using set_fact then it could start with and underscore.
+>This would donote a varibale is being set within a play and not gathered from a play
 >Consistency is key, so choose a naming convention and apply it consistently throughout your playbooks.  
 
 >#### Variable Declaration:  
