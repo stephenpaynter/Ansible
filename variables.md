@@ -58,7 +58,8 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 >When working with roles, declare variables within the defaults/main.yml file of the role.  
 >This ensures that the variables are accessible within the role and can be easily overridden by users.   
 
->For example:  
+>For example:
+>  
 >```
 ># Role: my_role
 ># Path: roles/my_role/defaults/main.yml
@@ -67,23 +68,26 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 >```
 
 >#### Variable Precedence and Overriding:  
-Ansible follows a specific order of precedence when resolving variables. Understanding this order is essential to ensure desired variable values. 
-The order of precedence, from highest to lowest, is as follows:    
-Variables defined explicitly in the task.    
-Variables passed through the vars section of the playbook.  
-Variables defined within the role's defaults/main.yml.  
-Variables provided through inventory, including host_vars and group_vars.  
-To override variables at runtime, pass them as extra variables using the -e flag or through an inventory file.   
-For example:  
-  
-ansible-playbook my_playbook.yml -e "my_variable=new_value"  
+>Ansible follows a specific order of precedence when resolving variables. Understanding this order is essential to ensure desired variable values.  
+>The order of precedence, from highest to lowest, is as follows:     
+>Variables defined explicitly in the task.    
+>Variables passed through the vars section of the playbook.  
+>Variables defined within the role's defaults/main.yml.  
+>Variables provided through inventory, including host_vars and group_vars.  
+>To override variables at runtime, pass them as extra variables using the -e flag or through an inventory file.   
 
+>For example:
+>  
+>```
+ansible-playbook my_playbook.yml -e "my_variable=new_value"  
+>```
+>  
 >#### Variable Encryption:
-Sensitive information such as passwords, API keys, or private keys should be encrypted when stored in variables. 
-Ansible provides the ansible-vault command to encrypt and decrypt files containing sensitive data. Avoid storing plaintext sensitive information in variable files or playbooks.  
+>Sensitive information such as passwords, API keys, or private keys should be encrypted when stored in variables. 
+>Ansible provides the ansible-vault command to encrypt and decrypt files containing sensitive data. Avoid storing plaintext sensitive information in variable files or playbooks.  
   
 >#### Variable Files and Organization:  
-Organizing variable files can greatly improve playbook maintenance and readability. Consider the following recommendations:  
-Use separate variable files for different environments or specific roles.  
-Group related variables within the same file.  
-Use the group_vars and host_vars directories to store variables specific to groups or individual hosts, respectively.  
+>Organizing variable files can greatly improve playbook maintenance and readability. Consider the following recommendations:  
+>Use separate variable files for different environments or specific roles.  
+>Group related variables within the same file.  
+>Use the group_vars and host_vars directories to store variables specific to groups or individual hosts, respectively.  
