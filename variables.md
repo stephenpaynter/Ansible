@@ -24,17 +24,18 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 >Inline variable declaration can be useful for simple, short-lived variables.   
 >However, it is recommended to limit its usage, especially for complex or lengthy expressions. Instead, prefer declaring variables using the vars keyword within a playbook or role. For example:  
 
-
-- name: Inline variable declaration (avoid for complex expressions)
-  hosts: localhost
-  gather_facts: false
-  tasks:
-    - debug:
-        var: my_variable
-      vars:
-        my_variable: "value"
-
-Playbook-Level Variable Declaration:  
+>```
+>- name: Inline variable declaration (avoid for complex expressions)
+>  hosts: localhost
+>  gather_facts: false
+>  tasks:
+>    - debug:
+>        var: my_variable
+>      vars:
+>        my_variable: "value"
+>```
+>  
+>#### Playbook-Level Variable Declaration:  
 Defining variables at the playbook level using the vars keyword makes them accessible across all tasks within the playbook.  
 This approach helps maintain consistency and simplifies playbook maintenance.  
 
