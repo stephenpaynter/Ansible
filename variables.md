@@ -5,11 +5,11 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 
 >#### Best Practices for Using Variables and Variable Declaration in Ansible  
 
-Consistent Variable Naming:  
-Maintaining a consistent naming convention for variables improves readability and reduces confusion.   
-Consider using lowercase letters with underscores (_) to separate words in variable names. For example:  
+>Consistent Variable Naming:  
+>Maintaining a consistent naming convention for variables improves readability and reduces confusion.   
+>Consider using lowercase letters with underscores (_) to separate words in variable names. For example:  
 
-# Bad practice
+># Bad practice
 myVariable = "value"
 
 # Good practice
