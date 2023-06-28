@@ -78,7 +78,7 @@ Ansible provides multiple methods for declaring variables. Let's explore some be
 
 >For example:
 >```
-ansible-playbook my_playbook.yml -e "my_variable=new_value"  
+>ansible-playbook my_playbook.yml -e "my_variable=new_value"  
 >```
 >  
 >#### Variable Encryption:
