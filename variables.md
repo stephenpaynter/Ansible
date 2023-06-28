@@ -9,20 +9,21 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >Maintaining a consistent naming convention for variables improves readability and reduces confusion.   
 >Consider using lowercase letters with underscores (_) to separate words in variable names. For example:  
 
-># Bad practice
-myVariable = "value"
+>#### Bad practice
+>myVariable = "value"
 
-# Good practice
-my_variable = "value"
+>#### Good practice
+>my_variable = "value"
 
-Consistency is key, so choose a naming convention and apply it consistently throughout your playbooks.  
+>Consistency is key, so choose a naming convention and apply it consistently throughout your playbooks.  
 
-Variable Declaration:  
+>#### Variable Declaration:  
 Ansible provides multiple methods for declaring variables. Let's explore some best practices for each approach:  
 
-Inline Variable Declaration:
-Inline variable declaration can be useful for simple, short-lived variables.   
-However, it is recommended to limit its usage, especially for complex or lengthy expressions. Instead, prefer declaring variables using the vars keyword within a playbook or role. For example:  
+>#### Inline Variable Declaration:
+>Inline variable declaration can be useful for simple, short-lived variables.   
+>However, it is recommended to limit its usage, especially for complex or lengthy expressions. Instead, prefer declaring variables using the vars keyword within a playbook or role. For example:  
+
 
 - name: Inline variable declaration (avoid for complex expressions)
   hosts: localhost
