@@ -111,19 +111,20 @@
 >with_items
 >```
 >with_items is replaced by loop and the flatten filter.
->  
-- name: with_items
-  ansible.builtin.debug:
-    msg: "{{ item }}"
-  with_items: "{{ items }}"
-
-- name: with_items -> loop
-  ansible.builtin.debug:
-    msg: "{{ item }}"
-  loop: "{{ items|flatten(levels=1) }}"
-with_indexed_items
-
-with_indexed_items is replaced by loop, the flatten filter and loop_control.index_var.
+>
+>```
+>- name: with_items
+>  ansible.builtin.debug:
+>    msg: "{{ item }}"
+>  with_items: "{{ items }}">
+>
+>- name: with_items -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ item }}"
+>  loop: "{{ items|flatten(levels=1) }}"
+>with_indexed_items
+>```
+>with_indexed_items is replaced by loop, the flatten filter and loop_control.index_var.
 
 - name: with_indexed_items
   ansible.builtin.debug:
