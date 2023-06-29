@@ -110,7 +110,7 @@
 >    - two
 >with_items
 >```
->with_items is replaced by loop and the flatten filter.
+>with_items is replaced by loop and the flatten filter.  
 >
 >```
 >- name: with_items
@@ -124,131 +124,136 @@
 >  loop: "{{ items|flatten(levels=1) }}"
 >with_indexed_items
 >```
->with_indexed_items is replaced by loop, the flatten filter and loop_control.index_var.
+>with_indexed_items is replaced by loop, the flatten filter and loop_control.index_var.  
+>```
+>- name: with_indexed_items
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }}"
+>  with_indexed_items: "{{ items }}"
+>
+>- name: with_indexed_items -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ index }} - {{ item }}"
+>  loop: "{{ items|flatten(levels=1) }}"
+>  loop_control:
+>    index_var: index
+>with_flattened
+>```
+>with_flattened is replaced by loop and the flatten filter.    
+>```
+>- name: with_flattened
+>  ansible.builtin.debug:
+>    msg: "{{ item }}"
+>  with_flattened: "{{ items }}"
+>
+>- name: with_flattened -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ item }}"
+>  loop: "{{ items|flatten }}"
+>  with_together
+>```
+>with_together is replaced by loop and the zip filter.  
+>```
+>- name: with_together
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }}"
+>  with_together:
+>    - "{{ list_one }}"
+>    - "{{ list_two }}"
+>
+>- name: with_together -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }}"
+>  loop: "{{ list_one|zip(list_two)|list }}"
+>```
+>Another example with complex data  
+>
+>```
+>- name: with_together -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }} - {{ item.2 }}"
+>  loop: "{{ data[0]|zip(*data[1:])|list }}"
+>  vars:
+>    data:
+>      - ['a', 'b', 'c']
+>      - ['d', 'e', 'f']
+>      - ['g', 'h', 'i']
+>```
+>with_dict  
+>  
+with_dict can be substituted by loop and either the dictsort or dict2items filters.  
+>```
+>- name: with_dict
+>  ansible.builtin.debug:
+>    msg: "{{ item.key }} - {{ item.value }}"
+>  with_dict: "{{ dictionary }}"
+>
+>- name: with_dict -> loop (option 1)
+>  ansible.builtin.debug:
+>    msg: "{{ item.key }} - {{ item.value }}"
+>  loop: "{{ dictionary|dict2items }}"
+>
+>- name: with_dict -> loop (option 2)
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }}"
+>  loop: "{{ dictionary|dictsort }}"
+>with_sequence
+>```
+>with_sequence is replaced by loop and the range function, and potentially the format filter.  
+>```
+>- name: with_sequence
+>  ansible.builtin.debug:
+>    msg: "{{ item }}"
+>  with_sequence: start=0 end=4 stride=2 format=testuser%02x
+>
+>- name: with_sequence -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ 'testuser%02x' | format(item) }}"
+>  loop: "{{ range(0, 4 + 1, 2)|list }}"
+>The range of the loop is exclusive of the end point.
+>```
+>with_subelements
 
-- name: with_indexed_items
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }}"
-  with_indexed_items: "{{ items }}"
-
-- name: with_indexed_items -> loop
-  ansible.builtin.debug:
-    msg: "{{ index }} - {{ item }}"
-  loop: "{{ items|flatten(levels=1) }}"
-  loop_control:
-    index_var: index
-with_flattened
-
-with_flattened is replaced by loop and the flatten filter.
-
-- name: with_flattened
-  ansible.builtin.debug:
-    msg: "{{ item }}"
-  with_flattened: "{{ items }}"
-
-- name: with_flattened -> loop
-  ansible.builtin.debug:
-    msg: "{{ item }}"
-  loop: "{{ items|flatten }}"
-with_together
-
-with_together is replaced by loop and the zip filter.
-
-- name: with_together
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }}"
-  with_together:
-    - "{{ list_one }}"
-    - "{{ list_two }}"
-
-- name: with_together -> loop
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }}"
-  loop: "{{ list_one|zip(list_two)|list }}"
-Another example with complex data
-
-- name: with_together -> loop
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }} - {{ item.2 }}"
-  loop: "{{ data[0]|zip(*data[1:])|list }}"
-  vars:
-    data:
-      - ['a', 'b', 'c']
-      - ['d', 'e', 'f']
-      - ['g', 'h', 'i']
-with_dict
-
-with_dict can be substituted by loop and either the dictsort or dict2items filters.
-
-- name: with_dict
-  ansible.builtin.debug:
-    msg: "{{ item.key }} - {{ item.value }}"
-  with_dict: "{{ dictionary }}"
-
-- name: with_dict -> loop (option 1)
-  ansible.builtin.debug:
-    msg: "{{ item.key }} - {{ item.value }}"
-  loop: "{{ dictionary|dict2items }}"
-
-- name: with_dict -> loop (option 2)
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }}"
-  loop: "{{ dictionary|dictsort }}"
-with_sequence
-
-with_sequence is replaced by loop and the range function, and potentially the format filter.
-
-- name: with_sequence
-  ansible.builtin.debug:
-    msg: "{{ item }}"
-  with_sequence: start=0 end=4 stride=2 format=testuser%02x
-
-- name: with_sequence -> loop
-  ansible.builtin.debug:
-    msg: "{{ 'testuser%02x' | format(item) }}"
-  loop: "{{ range(0, 4 + 1, 2)|list }}"
-The range of the loop is exclusive of the end point.
-
-with_subelements
-
-with_subelements is replaced by loop and the subelements filter.
-
-- name: with_subelements
-  ansible.builtin.debug:
-    msg: "{{ item.0.name }} - {{ item.1 }}"
-  with_subelements:
-    - "{{ users }}"
-    - mysql.hosts
-
-- name: with_subelements -> loop
-  ansible.builtin.debug:
-    msg: "{{ item.0.name }} - {{ item.1 }}"
-  loop: "{{ users|subelements('mysql.hosts') }}"
-with_nested/with_cartesian
-
-with_nested and with_cartesian are replaced by loop and the product filter.
-
-- name: with_nested
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }}"
-  with_nested:
-    - "{{ list_one }}"
-    - "{{ list_two }}"
-
-- name: with_nested -> loop
-  ansible.builtin.debug:
-    msg: "{{ item.0 }} - {{ item.1 }}"
-  loop: "{{ list_one|product(list_two)|list }}"
-with_random_choice
-
-with_random_choice is replaced by just use of the random filter, without need of loop.
-
-- name: with_random_choice
-  ansible.builtin.debug:
-    msg: "{{ item }}"
-  with_random_choice: "{{ my_list }}"
-
-- name: with_random_choice -> loop (No loop is needed here)
-  ansible.builtin.debug:
-    msg: "{{ my_list|random }}"
-  tags: random
+>with_subelements is replaced by loop and the subelements filter.
+>```
+>- name: with_subelements
+>  ansible.builtin.debug:
+>    msg: "{{ item.0.name }} - {{ item.1 }}"
+>  with_subelements:
+>    - "{{ users }}"
+>    - mysql.hosts
+>
+>- name: with_subelements -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ item.0.name }} - {{ item.1 }}"
+>  loop: "{{ users|subelements('mysql.hosts') }}"
+>```
+>with_nested/with_cartesian 
+>
+>with_nested and with_cartesian are replaced by loop and the product filter.  
+>```
+>- name: with_nested
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }}"
+>  with_nested:
+>    - "{{ list_one }}"
+>    - "{{ list_two }}"
+>
+>- name: with_nested -> loop
+>  ansible.builtin.debug:
+>    msg: "{{ item.0 }} - {{ item.1 }}"
+>  loop: "{{ list_one|product(list_two)|list }}"
+>with_random_choice
+>```
+>with_random_choice is replaced by just use of the random filter, without need of loop.  
+>```
+>- name: with_random_choice
+>  ansible.builtin.debug:
+>    msg: "{{ item }}"
+>  with_random_choice: "{{ my_list }}"
+>
+>- name: with_random_choice -> loop (No loop is needed here)
+>  ansible.builtin.debug:
+>    msg: "{{ my_list|random }}"
+>  tags: random
+>```
