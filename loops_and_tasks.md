@@ -85,13 +85,13 @@
 >If you need to iterate over complex data structures, such as dictionaries or files, the specialized with_* loops provide a more suitable approach.
 >Take advantage of the with_nested loop when you need to iterate over multiple nested loops.
 >
->#### Migrating from with_X to loop  
+>#### Migrating from with_X to loop  
   
 >In most cases, loops work best with the loop keyword instead of with_X style loops. The loop syntax is usually best expressed using filters instead of more complex use of query or lookup.  
   
 >These examples show how to convert many common with_ style loops to loop and filters.  
   
->#### with_list
+>#### with_list  
 
 >with_list is directly replaced by loop.
 >```  
