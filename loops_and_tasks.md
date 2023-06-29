@@ -254,3 +254,48 @@
 >    msg: "{{ my_list|random }}"
 >  tags: random
 >```
+##### Methods of Using include_tasks in Ansible  
+>
+>#### 1. Basic include_tasks Directive  
+>The basic usage of include_tasks involves including a separate tasks file directly into a playbook.  
+>
+>```
+>Here's an example:
+>- name: Include tasks from separate file
+>  include_tasks: tasks.yml
+>```
+>In the above example, the include_tasks directive is used to include the tasks defined in the tasks.yml file into the playbook.  
+>
+>#### 2. Dynamic include_tasks Directive    
+>Ansible also allows you to dynamically include tasks based on conditional statements.  
+>This method is useful when you need to include different task files based on specific conditions.   
+>  
+Here's an example:   
+>```
+>- name: Include tasks dynamically based on condition
+>  include_tasks: "{{ include_tasks_file }}"
+>  when: some_condition
+>```
+>In the above example, the include_tasks directive is used with the when statement to conditionally include tasks from a file specified by the include_tasks_file variable.  
+>
+> 3. Looping with include_tasks  
+>You can also use the include_tasks directive within a loop to include different task files for each iteration.  
+>This method is beneficial when you need to perform similar tasks with different parameters. Here's an example:
+>
+>```
+>- name: Include tasks in a loop
+>  include_tasks: "{{ item }}"
+>  loop:
+>    - task1.yml
+>    - task2.yml
+>    - task3.yml
+>```
+>In the above example, the include_tasks directive is used within a loop to include different task files (task1.yml, task2.yml, and task3.yml) for each iteration.
+>
+>#### Recommendation
+>
+>The choice of method for using include_tasks depends on the specific requirements and complexity of your playbook.
+>
+>If you simply want to include a separate tasks file, the basic include_tasks directive is sufficient and provides a straightforward approach.
+>If you need to dynamically include tasks based on conditions, using the dynamic include_tasks directive with when statements allows you to achieve the desired flexibility.
+>When you have a repetitive task that requires different parameters, using the looping capability of include_tasks enables you to modularize your playbook efficiently.
