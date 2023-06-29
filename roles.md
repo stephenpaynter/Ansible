@@ -453,11 +453,11 @@ Role arguments serve as parameters that allow us to pass values to the role and 
 >```
 >
 >In the above example, the web_root variable is customized to deploy the web application to a different directory.    
-
-#### Benefits of Parametrizing with Variables:    
-
-Reusability: By parametrizing role arguments, roles become more adaptable and reusable across different environments or configurations. You can easily modify a role's behavior by adjusting variable values.   
-  
-Dynamic Configuration: Variables enable dynamic configuration management, allowing you to control various aspects of the role based on different factors such as target hosts, operating systems, or user preferences.  
-  
-Modularity: Parametrized role arguments promote modular design, making it easier to manage and maintain code. It enables decoupling of roles from specific values, fostering better code organization.  
+>
+>#### Benefits of Parametrizing with Variables:    
+>
+>Reusability: By parametrizing role arguments, roles become more adaptable and reusable across different environments or configurations. You can easily modify a role's behavior by adjusting variable values.   
+>  
+>Dynamic Configuration: Variables enable dynamic configuration management, allowing you to control various aspects of the role based on different factors such as target hosts, operating systems, or user preferences.  
+>  
+>Modularity: Parametrized role arguments promote modular design, making it easier to manage and maintain code. It enables decoupling of roles from specific values, fostering better code organization.  
