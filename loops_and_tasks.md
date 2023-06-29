@@ -270,7 +270,7 @@
 >Ansible also allows you to dynamically include tasks based on conditional statements.  
 >This method is useful when you need to include different task files based on specific conditions.   
 >  
-Here's an example:   
+>Here's an example:   
 >```
 >- name: Include tasks dynamically based on condition
 >  include_tasks: "{{ include_tasks_file }}"
