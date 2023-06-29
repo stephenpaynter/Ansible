@@ -179,7 +179,6 @@
 >      - ['d', 'e', 'f']
 >      - ['g', 'h', 'i']
 >```
->with_dict  
 >  
 with_dict can be substituted by loop and either the dictsort or dict2items filters.  
 >```
@@ -212,8 +211,7 @@ with_dict can be substituted by loop and either the dictsort or dict2items filte
 >  loop: "{{ range(0, 4 + 1, 2)|list }}"
 >The range of the loop is exclusive of the end point.
 >```
->with_subelements
-
+>
 >with_subelements is replaced by loop and the subelements filter.
 >```
 >- name: with_subelements
@@ -228,7 +226,6 @@ with_dict can be substituted by loop and either the dictsort or dict2items filte
 >    msg: "{{ item.0.name }} - {{ item.1 }}"
 >  loop: "{{ users|subelements('mysql.hosts') }}"
 >```
->with_nested/with_cartesian 
 >
 >with_nested and with_cartesian are replaced by loop and the product filter.  
 >```
