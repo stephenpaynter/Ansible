@@ -180,7 +180,7 @@
 >      - ['g', 'h', 'i']
 >```
 >  
-with_dict can be substituted by loop and either the dictsort or dict2items filters.  
+>with_dict can be substituted by loop and either the dictsort or dict2items filters.  
 >```
 >- name: with_dict
 >  ansible.builtin.debug:
