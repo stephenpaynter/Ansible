@@ -57,20 +57,20 @@
 >    state: directory
 >  loop: "{{ range(1, 5) | list }}"
 >```
-In the above example, the file module is used to create multiple directories. The with_sequence loop generates a sequence of numbers and iterates over each number to create a directory with the corresponding path.  
+>In the above example, the file module is used to create multiple directories. The with_sequence loop generates a sequence of numbers and iterates over each number to create a directory with the corresponding path.  
 >  
 >#### d. with_nested Loop
 >  
 >The with_nested loop allows you to iterate over nested loops. Here's an example:  
 >```
-- name: Create user directories using with_nested loop
-  file:
-    path: "/home/{{ item.0 }}/{{ item.1 }}"
-    state: directory
-  loop: "{{ users }}"
-  with_nested:
-    - ["user1", "user2"]
-    - ["documents", "pictures"]
+>- name: Create user directories using with_nested loop
+>  file:  
+>    path: "/home/{{ item.0 }}/{{ item.1 }}"
+>    state: directory
+>  loop: "{{ users }}"
+>  with_nested:
+>    - ["user1", "user2"]
+>    - ["documents", "pictures"]
 >```
 >  
 >In the above example, the file module is used to create user directories.
