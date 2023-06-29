@@ -423,7 +423,8 @@ Role arguments serve as parameters that allow us to pass values to the role and 
 >    - my_web_app_role
 >```
 >  
->Reference Variables in Role Tasks: Inside the role's tasks, use the defined variables to parameterize the behavior of the tasks.
+>Reference Variables in Role Tasks:  
+>Inside the role's tasks, use the defined variables to parameterize the behavior of the tasks.  
 >
 >```
 ># roles/my_web_app_role/tasks/main.yml
@@ -437,3 +438,26 @@ Role arguments serve as parameters that allow us to pass values to the role and 
 >    src: "{{ web_root }}/app"
 >    dest: "/var/www/html"
 >```
+>Customize Role Invocation:  
+>When invoking the role in a playbook, you can pass specific values for the variables, overriding the defaults defined earlier.  
+>
+>```
+># playbook.yml
+>- hosts: web_servers
+>  vars:
+>    web_port: 8080
+>    web_root: /var/www/my_custom_app
+>
+>  roles:
+>    - my_web_app_role
+>```
+>
+>In the above example, the web_root variable is customized to deploy the web application to a different directory.    
+
+#### Benefits of Parametrizing with Variables:    
+
+Reusability: By parametrizing role arguments, roles become more adaptable and reusable across different environments or configurations. You can easily modify a role's behavior by adjusting variable values.   
+  
+Dynamic Configuration: Variables enable dynamic configuration management, allowing you to control various aspects of the role based on different factors such as target hosts, operating systems, or user preferences.  
+  
+Modularity: Parametrized role arguments promote modular design, making it easier to manage and maintain code. It enables decoupling of roles from specific values, fostering better code organization.  
