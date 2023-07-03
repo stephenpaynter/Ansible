@@ -39,5 +39,5 @@
 > ### Code comments.  
 >We have already been gradually adopting this process. Use commons sense.  
 >There is little use in adding comments before a debug command.  
->However, if a complex loop or variables are being parsed and fed into a play, then document this In a comment prior to the code with a >useful description.  
+>However, if a complex loop or variables are being parsed and fed into a play, then document this In a comment prior to the code with a useful description.    
 >Use the following format.  
