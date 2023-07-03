@@ -37,14 +37,16 @@
 ># DONT MAKE CHANGES TO THIS SCRIPT LOCALLY AS THIS IS MANAGED BY GIT. (see above)
 >```
 > ### Code comments.  
->We have already been gradually adopting this process. Use commons sense.  
+>We have already been gradually adopting this process. Use common sense.  
 >There is little use in adding comments before a debug command.  
->However, if a complex loop or variables are being parsed and fed into a play, then document this In a comment prior to the code with a useful description.
->    
+>However, if complex loops or variables are being parsed and fed into a play, then document this in a comment prior to the code with a useful description.>In 
+>Comments shcould explain WHY we're doing something, in a simliar fashion to Git commenting.
+>There is littel or no point in mentioning WHAT we are doing, as this is visible in the code to the reader.
+>
 >Use the following format.
 >
 >```
-> # Add a comment in this format. Dont extend lines to far that it ebcomes unreadable.
+> # Add a comment in this format. Dont extend lines to far that it becomes unreadable.
 > # Spread them over multiple lines.
 >```
 >
