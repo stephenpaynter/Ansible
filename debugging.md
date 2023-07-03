@@ -63,6 +63,17 @@
 >Ansible Tower allows you to configure job notifications, which can be helpful for debugging purposes.  
 With job notifications enabled, AAP will send email or other notifications when a job encounters errors or fails to complete successfully.  
 >  
->To set up job notifications in Ansible Tower, you need to configure notification settings in the Tower web interface. 
->This typically involves defining the email recipients, subject, and other relevant details. 
+>To set up job notifications in Ansible Tower, you need to configure notification settings in the Tower web interface.   
+>This typically involves defining the email recipients, subject, and other relevant details.  
 >When a job fails, you will receive a notification containing the error details, allowing you to quickly identify and resolve the issue.
+>
+> Review Job Output
+>AAP automatically generates job output. This history can be valuable for debugging and troubleshooting.
+>
+>To access job outputin Ansible Tower, follow these steps:  
+>
+> - Go to the "Jobs" section in the Ansible Tower web interface.  
+> - Locate the job run that you want to inspect and click on its name to open the job output.  
+> - In the job output view, click on a task.  
+> - Click on JSON to inspect a task output and variables.  
+> - Click on the artifact name to download and review its contents.  
