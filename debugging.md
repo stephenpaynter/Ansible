@@ -59,7 +59,7 @@
 >  
 >By reviewing the standard output, you can identify issues, inspect variable values, and gain insights into the playbook execution flow.
 >
-> Enable Job Notifications
+> #### Enable Job Notifications  
 >Ansible Tower allows you to configure job notifications, which can be helpful for debugging purposes.  
 With job notifications enabled, AAP will send email or other notifications when a job encounters errors or fails to complete successfully.  
 >  
