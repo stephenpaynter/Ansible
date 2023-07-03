@@ -23,8 +23,8 @@
 > Here's an example:
 >```
 > - name: Display gathered facts
->    debug:
->      var: ansible_facts
+>   debug:
+>     var: ansible_facts
 >```
 >
 > ####  Use Conditional Debugging
@@ -35,9 +35,9 @@
 >Here's an example:
 >```
 > - name: Perform a task with debugging
->  debug:
->    msg: "Debugging is enabled!"
->  when: debug_enabled | default(false)
+>   debug:
+>     msg: "Debugging is enabled!"
+>   when: debug_enabled | default(false)
 >```
 >
 > In this example, the task will only execute if the debug_enabled variable is set to true.  
