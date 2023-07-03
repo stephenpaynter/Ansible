@@ -13,6 +13,6 @@
   
 >```
 >- name: Debug variable value
->  debug:
->    var: my_variable
+>   debug:
+>     var: my_variable
 ```
