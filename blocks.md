@@ -39,5 +39,21 @@
 > ### Code comments.  
 >We have already been gradually adopting this process. Use commons sense.  
 >There is little use in adding comments before a debug command.  
->However, if a complex loop or variables are being parsed and fed into a play, then document this In a comment prior to the code with a useful description.    
->Use the following format.  
+>However, if a complex loop or variables are being parsed and fed into a play, then document this In a comment prior to the code with a useful description.
+>    
+>Use the following format.
+>
+>```
+> # Add a comment in this format. Dont extend lines to far that it ebcomes unreadable.
+> # Spread them over multiple lines.
+>```
+>
+>### Naming Standards
+>All plays should be named with a relevant name. First, as this is required to pass linting and secondly it assists in helping others when reading code.
+>It may also be worth numbering each play. This can assist in troubleshooting code when failures occur within Job Template outputs.
+>
+>```
+>    - name: "0.0: Setup Project Token For Gitlab in EE"
+>      set_fact:
+>        _project_token: '{{ lookup("env", "GITLAB_TOKEN") }}'
+>```
