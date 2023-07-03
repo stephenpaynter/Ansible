@@ -42,3 +42,18 @@
 >
 > In this example, the task will only execute if the debug_enabled variable is set to true.  
 > You can adjust the condition according to your specific needs.  
+>  
+>   
+> #### Debugging in AAP
+>
+> #### View Standard Out
+>
+> When running a playbook in Ansible Tower, you can view the standard output (stdout) of each task in real-time. This allows you to monitor the progress of the playbook execution and check for any >errors or unexpected output.
+>
+>To view the standard output in AAP, follow these steps:
+>
+>Navigate to the "Jobs" section in the Ansible Tower web interface.
+>Locate the job run that you want to debug and click on its name to open the job details.
+>In the job details view, click on the "Standard Out" tab.
+>The standard output of each task will be displayed, showing the module output, debug messages, and any other print statements within the playbook.
+>By reviewing the standard output, you can identify issues, inspect variable values, and gain insights into the playbook execution flow.
