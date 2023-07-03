@@ -52,8 +52,9 @@
 >
 >To view the standard output in AAP, follow these steps:
 >
->Navigate to the "Jobs" section in the Ansible Tower web interface.
->Locate the job run that you want to debug and click on its name to open the job details.
->In the job details view, click on the "Standard Out" tab.
->The standard output of each task will be displayed, showing the module output, debug messages, and any other print statements within the playbook.
->By reviewing the standard output, you can identify issues, inspect variable values, and gain insights into the playbook execution flow.
+> - Navigate to the "Jobs" section in the Ansible Tower web interface.  
+> - Locate the job run that you want to debug and click on its name to open the job details.  
+> - In the job details view, click on the "Standard Out" tab.  
+> - The standard output of each task will be displayed, showing the module output, debug messages, and any other print statements within the playbook.
+>  
+>By reviewing the standard output, you can identify issues, inspect variable values, and gain insights into the playbook execution flow.  
