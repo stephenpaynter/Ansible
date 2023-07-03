@@ -69,6 +69,8 @@ With job notifications enabled, AAP will send email or other notifications when 
 >
 > Review Job Output
 >AAP automatically generates job output. This history can be valuable for debugging and troubleshooting.
+>Jpb Output can be changed from the Job Template page.
+>Under Verbosity, select the required debugging level.
 >
 >To access job outputin Ansible Tower, follow these steps:  
 >
