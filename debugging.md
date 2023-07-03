@@ -57,4 +57,12 @@
 > - In the job details view, click on the "Standard Out" tab.  
 > - The standard output of each task will be displayed, showing the module output, debug messages, and any other print statements within the playbook.
 >  
->By reviewing the standard output, you can identify issues, inspect variable values, and gain insights into the playbook execution flow.  
+>By reviewing the standard output, you can identify issues, inspect variable values, and gain insights into the playbook execution flow.
+>
+> Enable Job Notifications
+>Ansible Tower allows you to configure job notifications, which can be helpful for debugging purposes.  
+With job notifications enabled, AAP will send email or other notifications when a job encounters errors or fails to complete successfully.  
+>  
+>To set up job notifications in Ansible Tower, you need to configure notification settings in the Tower web interface. 
+>This typically involves defining the email recipients, subject, and other relevant details. 
+>When a job fails, you will receive a notification containing the error details, allowing you to quickly identify and resolve the issue.
