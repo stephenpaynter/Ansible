@@ -43,7 +43,7 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >Example of an argument spec file (my_task_args.yml):
 >
 >```
->--- name: # Required string argument   
+>    name: # Required string argument   
 >      type: str   
 >      required: true   
 >    age: # Optional integer argument with default value 
