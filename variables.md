@@ -43,17 +43,50 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >Example of an argument spec file (my_task_args.yml):
 >
 >```
->    name: # Required string argument   
->      type: str   
->      required: true   
->    age: # Optional integer argument with default value 
->      type: int 
->      default: 18 
->      default: needed for default integer
->    email: # Optional string argument with validation 
->      type: str 
->      default: hello_world
->      decription: needed for email 
+>---
+>
+>argument_specs:
+>  main:
+>    short_description: "Install and configure ntp on your system."
+>    description: >
+>      Install all required packages, configure required files and manage services to use NTP services.
+>    author: Robert de Bock
+>    options:
+>      ntp_state:
+>        type: "str"
+>        default: started
+>        description: "The state of the NTP service."
+>        choices:
+>          - started
+>          - stopped
+>      ntp_enabled:
+>        type: "bool"
+>        default: yes
+>        description: "The state of the NTP service at boot."
+>      ntp_interfaces:
+>        type: "list"
+>        elements: str
+>        default:
+>          - address: "127.0.0.1"
+>        description: "A list of IP addresses to listen on."
+>      ntp_pool:
+>        type: "list"
+>        elements: str
+>        default:
+>          - name: "0.pool.ntp.org iburst"
+>          - name: "1.pool.ntp.org iburst"
+>          - name: "2.pool.ntp.org iburst"
+>          - name: "3.pool.ntp.org iburst"
+>        description: "A list of NTP pools and their options."
+>      ntp_servers:
+>        type: "list"
+>        elements: str
+>        required: no
+>        description: "A list of NTP servers and their options."
+>      ntp_timezone:
+>        type: "str"
+>        default: "Europe/Amsterdam"
+>        description: "The timezone."
 >```
 >In this example, we have three arguments: name, age, and email. The name argument is required and expects a string value.  
 >The age argument is optional >and expects an integer value, with the default set to 18. The email argument >is also optional.   
