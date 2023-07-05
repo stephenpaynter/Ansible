@@ -88,8 +88,6 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >        default: "Europe/Amsterdam"
 >        description: "The timezone."
 >```
->In this example, we have three arguments: name, age, and email. The name argument is required and expects a string value.  
->The age argument is optional >and expects an integer value, with the default set to 18. The email argument >is also optional.   
 >
 > Place any Argument Spec in the Meta file.  
 >#### Variable Declaration:    
