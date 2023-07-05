@@ -8,7 +8,7 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >Consistent Variable Naming:
 >  
 >Maintaining a consistent naming convention for variables improves readability and reduces confusion.   
->Consider using lowercase letters with underscores (_) to separate words in variable names. For example:  
+>Use lowercase letters with underscores (_) to separate words in variable names. For example:  
 
 >#### Bad practice
 >myVariable = "value"
@@ -16,12 +16,52 @@ Some strings are reserved for other purposes and aren’t valid variable names, 
 >#### Good practice
 >my_variable = "value"
 
->May be worth setting standarsd for initial variable declaration and set_fact. If a variable is set using set_fact then it could start with and underscore.
+>Use the following standards for initial variable declaration, 
+>including var: register and set_fact
+>Underscore prefix where variables will be available only inside the role
+>
+>```
+>- variable: _variable
+>```
+>and No prefix where variables are to be exported outside of the play or role.
+>
+>```
+>- variable: variable
+>```
+
+>If a variable is set using set_fact then it could start with and underscore.
 >This would donote a varibale is being set within a play and not gathered from a play
 >Consistency is key, so choose a naming convention and apply it consistently throughout your playbooks.  
 
->#### Variable Declaration:  
-Ansible provides multiple methods for declaring variables. Let's explore some best practices for each approach:  
+>#### Argument Spec: 
+
+>Argument spec in Ansible is a mechanism for defining and enforcing a structure >for the inputs that your tasks and roles require. 
+>It allows you to specify the expected arguments, their data types, default   >values, and additional constraints.   
+>By defining argument spec, you can improve the reusability,   
+>clarity, and reliability of your Ansible code.  
+
+>Example of an argument spec file (my_task_args.yml):
+>
+>```
+>--- name: # Required string argument   
+>      type: str   
+>      required: true   
+>    age: # Optional integer argument with default value 
+>      type: int 
+>      default: 18 
+>      default: needed for default integer
+>    email: # Optional string argument with validation 
+>      type: str 
+>      default: hello_world
+>      decription: needed for email 
+>```
+>In this example, we have three arguments: name, age, and email. The name argument is required and expects a string value.  
+>The age argument is optional >and expects an integer value, with the default set to 18. The email argument >is also optional.   
+>
+> Place any Argument Spec in the Meta file.  
+>#### Variable Declaration:    
+Ansible provides multiple methods for declaring variables.   
+>Let's explore some best practices for each approach:  
 
 >#### Inline Variable Declaration:
 >Inline variable declaration can be useful for simple, short-lived variables.   
