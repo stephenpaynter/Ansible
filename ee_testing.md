@@ -30,3 +30,9 @@
 >Generate reports regularly to share the status of each business unit's execution environment with relevant stakeholders.
   
 >#### Testing Framework  
+
+>Test all HCS Automation Squad owned Job Templates against desired target EE.
+>Investigate internally a process to identify any code issues with may result from upgarding to the desired target EE.
+>Validate PDU code against above process (possible shift left task)
+>Document and validate andy required code changes.
+>Promote new EE
